@@ -1,7 +1,7 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "online_assessment";
+$username = "decision_making";
 $password = "";
 
 // Create connection
@@ -26,18 +26,14 @@ $result = $conn->query($query);
 if ($result->num_rows > 0) {
     $_SESSION['user_email'] = $username;
     $row = $result->fetch_assoc();
-    if($row['type'] =='lecturer'){
-        header('Location: ../lecturer/presonal_info.php');
-    }else if($row['type'] =='student'){
-        header('Location: ../student/presonal_info.php');
+    if ($row['type'] == 'sadmin') {
+        header('Location: ../category/addCategory.php');
+    } else if ($row['type'] == 'supervisor') {
+        header('Location: ../supervisor/register.php');
+    } else {
+        $_SESSION['Error'] = "There is no match, please make sure your email or password is correct";
 
-    }else if($row['type'] =='admin') {
-        header('Location: ../admin/add_lecturer.php');
+        header('Location: ../sign_in.php');
     }
-}
- else {
-     $_SESSION['Error'] = "There is no match, please make sure your email or password is correct";
-
-     header('Location: ../sign_in.php');
 }
 ?>

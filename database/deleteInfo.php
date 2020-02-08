@@ -1,7 +1,7 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "online_assessment";
+$username = "decision_making";
 $password = "";
 
 // Create connection
@@ -12,12 +12,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 mysqli_set_charset($conn,"utf8");
-$examID = $_POST['examId'];
-$U_email = $_SESSION['user_email'];
 
-$query = "UPDATE `answers` SET `submitted`='yes' WHERE e_id = ".$examID." and u_id = "."'$U_email'" ;
-$result = mysqli_query($conn, $query);
 
-if($result){
-    header('Location: ../student/exam.php');
+$sl_number = $_POST['sl_number'];
+$name = $_POST['name'];
+
+$query = "DELETE FROM `users` WHERE `number`= '".$sl_number."'";
+
+
+$result = $conn->query($query);
+
+if ($result) {
+    $_SESSION['success'] = 'The '. $name .' deleted successfully ';
+        header('Location: ../student/delete.php');
 }
+?>
