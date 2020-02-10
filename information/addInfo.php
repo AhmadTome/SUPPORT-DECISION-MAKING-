@@ -62,7 +62,7 @@ session_start();
 
             </div>
 
-            <form action="database/login.php" method="post" style="padding: 50px;">
+            <form action="" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">

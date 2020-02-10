@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Register Page For Student</title>
+    <title>Add Category</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -61,12 +61,32 @@ session_start();
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <p class="text-left" style="color: red">
+                <?php
+                if (isset($_SESSION['Error'])) {
+                    echo $_SESSION['Error'];
 
-            <form action="database/login.php" method="post" style="padding: 50px;">
+                    unset($_SESSION['Error']);
+
+                }
+                ?>
+            </p>
+            <p class="text-left" style="color: white; background-color: green" >
+                <?php
+                if( isset($_SESSION['success']) )
+                {
+                    echo $_SESSION['success'];
+
+                    unset($_SESSION['success']);
+
+                }
+                ?>
+            </p>
+            <form action="../database/addCategory.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="username" type="text" class="form-control input-lg" placeholder="Category Name"
+                        <input name="cat_name" type="text" class="form-control input-lg" placeholder="Category Name"
                                required/>
                     </div>
                 </div>
@@ -74,22 +94,9 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Description <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <textarea class="form-control" rows="8"></textarea>
+                        <textarea name="cat_desc" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
-
-
-                <p class="text-left" style="color: red">
-                    <?php
-                    if (isset($_SESSION['Error'])) {
-                        echo $_SESSION['Error'];
-
-                        unset($_SESSION['Error']);
-
-                    }
-                    ?>
-                </p>
-
 
                 <div class="row">
                     <div class="col-sm-4 text-right pull-right">

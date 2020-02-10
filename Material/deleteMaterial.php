@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Register Page For Student</title>
+    <title>Delete Material</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -61,13 +61,44 @@ session_start();
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <?php
 
-            <form action="database/login.php" method="post" style="padding: 50px">
+            $info = getInfo();
+            ?>
+            <p class="text-left" style="color: red">
+                <?php
+                if (isset($_SESSION['Error'])) {
+                    echo $_SESSION['Error'];
+
+                    unset($_SESSION['Error']);
+
+                }
+                ?>
+            </p>
+            <p class="text-left" style="color: white; background-color: green" >
+                <?php
+                if( isset($_SESSION['success']) )
+                {
+                    echo $_SESSION['success'];
+
+                    unset($_SESSION['success']);
+
+                }
+                ?>
+            </p>
+            <form action="../database/deleteMaterial.php" method="post" style="padding: 50px">
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control">
+                        <select class="form-control" id="category_select" name="category_select">
                             <option selected disabled>--- Select The Category Name ---</option>
+                            <?php
+                            for($i=0;$i<count($info);$i++){
+                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
+                            }
+
+                            ?>
+
 
                         </select>
                     </div>
@@ -76,7 +107,7 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Material Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control">
+                        <select class="form-control" name="material_select" id="material_select">
                             <option selected disabled>--- Select The Material Name ---</option>
 
                         </select>
@@ -86,7 +117,7 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Material Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="username" type="text" class="form-control input-lg" placeholder="Material Name"
+                        <input name="mat_name" id="mat_name" type="text" class="form-control input-lg" placeholder="Material Name"
                                required/>
                     </div>
                 </div>
@@ -94,29 +125,10 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Material Description <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <textarea class="form-control" rows="8"></textarea>
+                        <textarea name="mat_desc" id="mat_desc" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
-                    <label class="pull-left">Attachment <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <input name="username" type="file" class="form-control input-lg"
-                               required/>
-                    </div>
-                </div>
-
-
-                <p class="text-left" style="color: red">
-                    <?php
-                    if (isset($_SESSION['Error'])) {
-                        echo $_SESSION['Error'];
-
-                        unset($_SESSION['Error']);
-
-                    }
-                    ?>
-                </p>
 
 
                 <div class="row">
@@ -171,3 +183,104 @@ session_start();
 
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        $("#category_select").on("change",function () {
+            var cat_id = $(this).val();
+
+            $.ajax({
+                url: "../database/getMaterialInfo.php",
+                type: "get",
+                data: {"cat_id":cat_id,"mat_id":0} ,
+                success: function (res) {
+                    $("#material_select").empty();
+                    $("#mat_name").val('')
+                    $("#mat_desc").val('')
+                    res = JSON.parse(res);
+                    $("#material_select").append('<option selected disabled>--- Select The Material Name ---</option>');
+                    for(var i=0;i<res.length;i++){
+                        $("#material_select").append('<option value='+ res[i]["id"] +'>'+ res[i]["name"] +'</option>');
+                    }
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+        })
+
+
+        $("#material_select").on("change",function () {
+            var mat_id = $(this).val();
+            $.ajax({
+                url: "../database/getMaterialInfo.php",
+                type: "get",
+                data: {"mat_id":mat_id,"cat_id":0} ,
+                success: function (res) {
+                    res = JSON.parse(res);
+                    $("#mat_name").val('')
+                    $("#mat_desc").val('')
+                    $("#mat_name").val(res[0]["name"])
+                    $("#mat_desc").val(res[0]["description"])
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+
+        })
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+function getInfo(){
+    $servername = "localhost";
+    $username = "decision_making";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn,"utf8");
+
+
+
+
+    $query = "SELECT * FROM `category`";
+
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $info = [];
+        while ($row = $result->fetch_assoc()) {
+            array_push($info,
+                ["name" => $row["name"],
+                    "description" => $row["description"],
+                    "id" => $row["id"]
+                ]);
+        }
+        return $info;
+        //echo $sl_number;
+    }
+}
+
+
+?>

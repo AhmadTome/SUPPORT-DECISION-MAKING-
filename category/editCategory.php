@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Register Page For Student</title>
+    <title>Edit Category Information</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -62,12 +62,44 @@ session_start();
 
             </div>
 
-            <form action="database/login.php" method="post" style="padding: 50px;">
+            <?php
+
+                $info = getInfo();
+            ?>
+            <p class="text-left" style="color: red">
+                <?php
+                if (isset($_SESSION['Error'])) {
+                    echo $_SESSION['Error'];
+
+                    unset($_SESSION['Error']);
+
+                }
+                ?>
+            </p>
+            <p class="text-left" style="color: white; background-color: green" >
+                <?php
+                if( isset($_SESSION['success']) )
+                {
+                    echo $_SESSION['success'];
+
+                    unset($_SESSION['success']);
+
+                }
+                ?>
+            </p>
+            <form action="../database/editcatinfo.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control">
+                        <select class="form-control" id="category_select" name="category_select">
                             <option selected disabled>--- Select The Category Name ---</option>
+                            <?php
+                                for($i=0;$i<count($info);$i++){
+                                    echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
+                                }
+
+                            ?>
+                            ?>
 
                         </select>
                     </div>
@@ -76,7 +108,7 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Name <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="username" type="text" class="form-control input-lg" placeholder="Category Name"
+                        <input name="cat_name" id="cat_name" type="text" class="form-control input-lg" placeholder="Category Name"
                                required/>
                     </div>
                 </div>
@@ -84,7 +116,7 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-left">Category Description <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <textarea class="form-control" rows="8"></textarea>
+                        <textarea name="cat_desc" id="cat_desc" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
 
@@ -153,3 +185,74 @@ session_start();
 
 </body>
 </html>
+<script>
+
+    $(document).ready(function () {
+        $("#category_select").on("change",function () {
+            var id = $(this).val();
+
+            $.ajax({
+                url: "../database/getcatInfo.php",
+                type: "get",
+                data: {"id":id} ,
+                success: function (res) {
+
+
+                    res = JSON.parse(res)
+                    $("#cat_name").val(res[0].name)
+                    $("#cat_desc").val(res[0].description)
+
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+
+        })
+    })
+
+</script>
+
+<?php
+
+function getInfo(){
+    $servername = "localhost";
+    $username = "decision_making";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn,"utf8");
+
+
+
+
+    $query = "SELECT * FROM `category`";
+
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $info = [];
+        while ($row = $result->fetch_assoc()) {
+            array_push($info,
+                ["name" => $row["name"],
+                    "description" => $row["description"],
+                    "id" => $row["id"]
+                ]);
+        }
+       return $info;
+        //echo $sl_number;
+    } else {
+        header('Location: ../sign_in.php');
+    }
+}
+
+
+?>
