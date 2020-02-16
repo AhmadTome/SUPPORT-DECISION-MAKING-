@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caf3b49c-8e88-4c52-854b-e0601560d5de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/addCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addMaterial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/deleteMaterial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/deletecatinfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/editMaterial.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/editcatinfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/getMaterialInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/getcatInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/addInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Material/addMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/Material/addMaterial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Material/deleteMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/Material/deleteMaterial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Material/editMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/Material/editMaterial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/addCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/category/addCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/deletCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/category/deletCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/editCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/category/editCategory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/information/addInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/information/addInfo.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,23 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Material/editMaterial.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/information/addInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
-              <folding>
-                <element signature="e#6765#6788#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/editMaterial.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/addInformation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="510">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -101,7 +85,6 @@
         <option value="$PROJECT_DIR$/database/editInfo.php" />
         <option value="$PROJECT_DIR$/student/edit_info.php" />
         <option value="$PROJECT_DIR$/student/delete.php" />
-        <option value="$PROJECT_DIR$/information/addInfo.php" />
         <option value="$PROJECT_DIR$/database/addCategory.php" />
         <option value="$PROJECT_DIR$/category/addCategory.php" />
         <option value="$PROJECT_DIR$/database/getcatInfo.php" />
@@ -117,11 +100,13 @@
         <option value="$PROJECT_DIR$/database/addMaterial.php" />
         <option value="$PROJECT_DIR$/Material/editMaterial.php" />
         <option value="$PROJECT_DIR$/database/editMaterial.php" />
+        <option value="$PROJECT_DIR$/database/addInformation.php" />
+        <option value="$PROJECT_DIR$/information/addInfo.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -133,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,22 +133,18 @@
             <path>
               <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
               <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
+              <item name="information" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
               <item name="Material" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,16 +195,19 @@
       <workItem from="1581113503964" duration="9886000" />
       <workItem from="1581276002193" duration="5489000" />
       <workItem from="1581363526715" duration="7134000" />
+      <workItem from="1581586297878" duration="40000" />
+      <workItem from="1581597177274" duration="2109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42029000" />
+    <option name="totallyTimeSpent" value="44178000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20121029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -434,31 +417,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/information/addInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/category/deletCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="105" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/category/addCategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-397">
           <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="35" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -486,13 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/getMaterialInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/deleteInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -514,27 +469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/addMaterial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="58" column="18" lean-forward="true" selection-end-line="84" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/deleteMaterial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Material/editMaterial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
-          <folding>
-            <element signature="e#6765#6788#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,6 +487,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category/deletCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="88" column="20" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="88" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/getMaterialInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="2" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Material/editMaterial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1807">
+          <caret line="301" column="26" selection-start-line="270" selection-end-line="303" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/addCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="35" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/addMaterial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/addInformation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/information/addInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
         </state>
       </provider>
     </entry>
