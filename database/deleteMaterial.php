@@ -25,6 +25,6 @@ $result = $conn->query($query);
 
 if ($result) {
     $_SESSION['success'] = 'The '. $mat_name .' deleted successfully ';
-    header('Location: ../Material/deleteMaterial.php');
+    header('Location: ../admin/deleteMaterial.php');
 }
 ?>

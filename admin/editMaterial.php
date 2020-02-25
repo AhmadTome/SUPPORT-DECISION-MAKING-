@@ -53,7 +53,9 @@ session_start();
 
     </head>
     <body>
-
+    <?php
+    include ('navbar.html');
+    ?>
     <!-- start: page -->
     <div class="limiter">
         <div class="container-login100">

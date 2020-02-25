@@ -40,7 +40,7 @@ $result = $conn->query($query);
 if($result) {
     echo "Succesfully Updated!";
     if($user_type == "student" || $user_type == "supervisor"){
-        header('Location: ../student/edit_info.php');
+        header('Location: ../admin/edit_info.php');
         echo 'supervisor or student';
         $_SESSION['success'] = 'The '. $user_type .' Information Updated successfully ';
     }

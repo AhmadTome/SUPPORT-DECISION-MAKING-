@@ -42,7 +42,7 @@ if($result) {
     $_SESSION['user_email'] = $email;
     echo "Succesfully registered";
     if($user_type == "student" || $user_type == "supervisor"){
-        header('Location: ../student/register.php');
+        header('Location: ../admin/register.php');
        echo 'supervisor or student';
         $_SESSION['success'] = 'The '. $user_type .' added successfully ';
     }

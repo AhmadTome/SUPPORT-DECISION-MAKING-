@@ -27,7 +27,7 @@ $query = "INSERT INTO `material`(`name`, `description`, `file`, `cat_id`) VALUES
 $result = $conn->query($query);
 
 if($result) {
-    header('Location: ../Material/addMaterial.php');
+    header('Location: ../admin/addMaterial.php');
     $_SESSION['success'] = 'The '. $mat_name .' added successfully ';
 
 }

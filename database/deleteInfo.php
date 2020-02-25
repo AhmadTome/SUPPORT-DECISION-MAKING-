@@ -24,6 +24,6 @@ $result = $conn->query($query);
 
 if ($result) {
     $_SESSION['success'] = 'The '. $name .' deleted successfully ';
-        header('Location: ../student/delete.php');
+        header('Location: ../admin/delete.php');
 }
 ?>

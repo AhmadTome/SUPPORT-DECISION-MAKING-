@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>تعديل المعلومات</title>
+    <title>حذف معلومة</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -53,7 +53,9 @@ session_start();
 
 </head>
 <body>
-
+<?php
+include ('navbar.html');
+?>
 <!-- start: page -->
 <div class="limiter">
     <div class="container-login100">
@@ -87,12 +89,12 @@ session_start();
                 }
                 ?>
             </p>
-            <form action="../database/EditInformation.php" method="post" style="padding: 50px;">
+            <form action="../database/deleteInformation.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة الأقسام <span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة الاقسام <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" id="category_select" name="category_select">
-                            <option selected disabled>--- اختار اسم القائمة ---</option>
+                            <option selected disabled>--- اختار اسم القسم ---</option>
                             <?php
                             for($i=0;$i<count($info);$i++){
                                 echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
@@ -106,7 +108,7 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة المواد <span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة المواد  <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="material_select" id="material_select">
                             <option selected disabled>--- اختار اسم المادة ---</option>
@@ -115,10 +117,10 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">اسم المعلومة<span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة المعلومات <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="Information_select" id="Information_select">
-                            <option selected disabled>--- اختار المعلومة ---</option>
+                            <option selected disabled>--- اختار اسم المعلومة ---</option>
                         </select>
                     </div>
                 </div>
@@ -141,7 +143,7 @@ session_start();
 
                 <div class="row">
                     <div class="col-sm-4 text-right pull-left">
-                        <button type="submit" class="btn btn-primary hidden-xs ">تعديل</button>
+                        <button type="submit" class="btn btn-primary hidden-xs " >حذف</button>
                     </div>
                 </div>
 

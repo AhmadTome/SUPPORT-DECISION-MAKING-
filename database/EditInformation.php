@@ -27,7 +27,7 @@ $result = $conn->query($query);
 
 if($result) {
     echo "Succesfully Updated!";
-    header('Location: ../information/editInf.php');
+    header('Location: ../admin/editInf.php');
     $_SESSION['success'] = 'The '. $info_name .' Information Updated successfully ';
 }
 else {

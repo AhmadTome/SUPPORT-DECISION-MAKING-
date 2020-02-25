@@ -34,7 +34,7 @@ $result = $conn->query($query);
 if($result) {
     echo "Succesfully Updated!";
     $_SESSION['success'] = 'The '. $mat_name .' Information Updated successfully ';
-    header('Location: ../Material/editMaterial.php');
+    header('Location: ../admin/editMaterial.php');
 }
 else {
     $_SESSION['Error'] = "An error has occurred, please make sure that all field filled correctly";
