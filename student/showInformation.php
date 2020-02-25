@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Add Category</title>
+    <title>المعلومات</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -53,7 +53,9 @@ session_start();
 
 </head>
 <body>
-
+<?php
+include ('navbar.html')
+?>
 <!-- start: page -->
 <div class="limiter">
     <div class="container-login100">
@@ -61,6 +63,11 @@ session_start();
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <?php
+
+            $info = getInfo();
+
+            ?>
             <p class="text-left" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
@@ -82,27 +89,42 @@ session_start();
                 }
                 ?>
             </p>
-            <form action="../database/addCategory.php" method="post" style="padding: 50px;">
+            <form action="../database/EditInformation.php" method="post" style="padding: 50px;">
+
+
+
+
+
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Category Name <span class="required-star">*</span></label>
+                    <label class="pull-right">اسم المعلومة </label>
                     <div class="input-group input-group-icon">
-                        <input name="cat_name" type="text" class="form-control input-lg" placeholder="Category Name"
+                        <select class="form-control" name="Information_select" id="Information_select">
+                            <option selected disabled>--- اختار اسم المعلومة ---</option>
+                            <?php
+                            for($i=0;$i<count($info);$i++){
+                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
+                            }
+
+                            ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">المعلومة </label>
+                    <div class="input-group input-group-icon">
+                        <input name="info_name" id="info_name" type="text" class="form-control input-lg" placeholder="Information ..."
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Category Description <span class="required-star">*</span></label>
+                    <label class="pull-right">وصف المعلومة </label>
                     <div class="input-group input-group-icon">
-                        <textarea name="cat_desc" class="form-control" rows="8"></textarea>
+                        <textarea name="info_description" id="info_description" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-4 text-right pull-right">
-                        <button type="submit" class="btn btn-primary hidden-xs">Add</button>
-                    </div>
-                </div>
 
             </form>
 
@@ -150,3 +172,69 @@ session_start();
 
 </body>
 </html>
+
+<script>
+    $(document).ready(function () {
+
+
+        $("#Information_select").on("change",function () {
+            var id = $(this).val();
+            $.ajax({
+                url: "../database/getInformatonById.php",
+                type: "get",
+                data: {"id":id} ,
+                success: function (res) {
+                    res = JSON.parse(res);
+                    $("#info_name").val(res[0]["name"]);
+                    $("#info_description").val(res[0]["description"]);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+
+
+        })
+    })
+</script>
+
+
+<?php
+
+function getInfo(){
+    $servername = "localhost";
+    $username = "decision_making";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn,"utf8");
+
+
+
+
+    $query = "SELECT * FROM `information`";
+
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $info = [];
+        while ($row = $result->fetch_assoc()) {
+            array_push($info,
+                ["id" => $row["id"],
+                    "description" => $row["description"],
+                    "name" => $row["name"]
+                ]);
+        }
+        return $info;
+        //echo $sl_number;
+    }
+}
+
+
+?>

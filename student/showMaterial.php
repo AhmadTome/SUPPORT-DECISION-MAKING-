@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>حذف معلومة</title>
+    <title>المواد</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -53,6 +53,10 @@ session_start();
 
 </head>
 <body>
+<?php
+include ('navbar.html')
+?>
+
 
 <!-- start: page -->
 <div class="limiter">
@@ -61,12 +65,8 @@ session_start();
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
-            <?php
 
-            $info = getInfo();
-
-            ?>
-            <p class="text-right" style="color: red">
+            <p class="text-left" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
                     echo $_SESSION['Error'];
@@ -76,7 +76,7 @@ session_start();
                 }
                 ?>
             </p>
-            <p class="text-right" style="color: white; background-color: green" >
+            <p class="text-left" style="color: white; background-color: green" >
                 <?php
                 if( isset($_SESSION['success']) )
                 {
@@ -87,67 +87,49 @@ session_start();
                 }
                 ?>
             </p>
-            <form action="../database/deleteInformation.php" method="post" style="padding: 50px;">
-                <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة الاقسام <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <select class="form-control" id="category_select" name="category_select">
-                            <option selected disabled>--- اختار اسم القسم ---</option>
-                            <?php
-                            for($i=0;$i<count($info);$i++){
-                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
-                            }
-
-                            ?>
-
-
-                        </select>
-                    </div>
-                </div>
+<?php
+$info = getInfo();
+?>
+            <form action="../database/editInfo.php" method="post" style="padding: 50px;">
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة المواد  <span class="required-star">*</span></label>
+                    <label class="pull-right">اسم المادة </label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="material_select" id="material_select">
                             <option selected disabled>--- اختار اسم المادة ---</option>
+                            <?php
+                                for($i = 0 ; $i < count($info) ; $i++){
+                                    echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
+                                }
+
+                            ?>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة المعلومات <span class="required-star">*</span></label>
+                    <label class="pull-right">اسم المادة </label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control" name="Information_select" id="Information_select">
-                            <option selected disabled>--- اختار اسم المعلومة ---</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">المعلومة <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <input name="info_name" id="info_name" type="text" class="form-control input-lg text-right" placeholder="المعلومة"
+                        <input name="mat_name" id="mat_name" type="text" class="form-control input-lg" placeholder="Material Name"
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">الوصف <span class="required-star">*</span></label>
+                    <label class="pull-right">وصف المادة </label>
                     <div class="input-group input-group-icon">
-                        <textarea name="info_description" id="info_description" class="form-control" rows="8"></textarea>
+                        <textarea name="mat_desc" id="mat_desc" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
 
-
-                <div class="row">
-                    <div class="col-sm-4 text-right pull-left">
-                        <button type="submit" class="btn btn-primary hidden-xs " >حذف</button>
+                <div class="form-group mb-lg" id="dev_img">
+                    <span class="pull-right" style="cursor: pointer" onclick="deleteImg()">x</span>
+                    <div class="input-group input-group-icon">
+                        <img src="" alt="The image will shown here" width="100%" height="300px" id="image">
                     </div>
                 </div>
 
             </form>
-
-
 
 
 
@@ -192,81 +174,40 @@ session_start();
 </body>
 </html>
 
-<script>
-    $(document).ready(function () {
-        $("#category_select").on("change",function () {
-            var cat_id = $(this).val();
+    <script>
+        $(document).ready(function () {
 
-            $.ajax({
-                url: "../database/getMaterialInfo.php",
-                type: "get",
-                data: {"cat_id":cat_id,"mat_id":0} ,
-                success: function (res) {
-                    $("#material_select").empty();
-                    $("#mat_name").val('')
-                    $("#mat_desc").val('')
-                    res = JSON.parse(res);
-                    $("#material_select").append('<option selected disabled>--- Select The Material Name ---</option>');
-                    for(var i=0;i<res.length;i++){
-                        $("#material_select").append('<option value='+ res[i]["id"] +'>'+ res[i]["name"] +'</option>');
+
+
+            $("#material_select").on("change",function () {
+                var mat_id = $(this).val();
+                $.ajax({
+                    url: "../database/getMaterialInfo.php",
+                    type: "get",
+                    data: {"mat_id":mat_id,"cat_id":0} ,
+                    success: function (res) {
+                        res = JSON.parse(res);
+                        $("#mat_name").val('')
+                        $("#mat_desc").val('')
+                        $("#image").attr('src','')
+                        $("#mat_name").val(res[0]["name"])
+                        $("#mat_desc").val(res[0]["description"])
+                        $("#image").attr('src','../uploads/'+res[0]["file"])
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log(textStatus, errorThrown);
                     }
+                });
 
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
+            })
         })
 
 
-        var info_name = 'hi';
-        var info_description = 'hihi';
+        function deleteImg() {
+            $("#dev_img").empty();
+        }
+    </script>
 
-        $("#material_select").on("change",function () {
-            var mat_id = $(this).val();
-            var cat_id = $("#category_select").val();
-            $.ajax({
-                url: "../database/getInformation.php",
-                type: "get",
-                data: {"mat_id":mat_id,"cat_id":cat_id} ,
-                success: function (res) {
-                    $("#Information_select").empty();
-                    $("#info_name").val('')
-                    $("#info_description").val('')
-                    res = JSON.parse(res);
-                    $("#Information_select").append('<option selected disabled>--- Select Information Name ---</option>');
-                    for(var i=0;i<res.length;i++){
-                        $("#Information_select").append('<option value='+ res[i]["id"] +'>'+ res[i]["name"] +'</option>');
-                    }
-
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-        });
-
-        $("#Information_select").on("change",function () {
-            var id = $(this).val();
-            $.ajax({
-                url: "../database/getInformatonById.php",
-                type: "get",
-                data: {"id":id} ,
-                success: function (res) {
-                    res = JSON.parse(res);
-                    $("#info_name").val(res[0]["name"]);
-                    $("#info_description").val(res[0]["description"]);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-
-        })
-    })
-</script>
 
 
 <?php
@@ -288,7 +229,7 @@ function getInfo(){
 
 
 
-    $query = "SELECT * FROM `category`";
+    $query = "SELECT * FROM `material`";
 
     $result = $conn->query($query);
 
@@ -296,9 +237,11 @@ function getInfo(){
         $info = [];
         while ($row = $result->fetch_assoc()) {
             array_push($info,
-                ["name" => $row["name"],
+                ["id" => $row["id"],
                     "description" => $row["description"],
-                    "id" => $row["id"]
+                    "name" => $row["name"],
+                    "file" => $row["file"]
+
                 ]);
         }
         return $info;

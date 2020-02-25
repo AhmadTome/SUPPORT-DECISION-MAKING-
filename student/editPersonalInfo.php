@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Register Page For Student</title>
+    <title>تعديل معلوماتي الشخصية</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -52,10 +52,18 @@ session_start();
 
 
 </head>
+<style>
+    input{
+        text-align: right !important;
+    }
+</style>
 <body>
-
-
-
+<?php
+include ('navbar.html')
+?>
+<?php
+$info = getInfo();
+?>
 <!-- start: page -->
 <div class="limiter">
     <div class="container-login100">
@@ -64,7 +72,7 @@ session_start();
 
             </div>
 
-            <p class="text-left" style="color: red">
+            <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
                     echo $_SESSION['Error'];
@@ -74,7 +82,7 @@ session_start();
                 }
                 ?>
             </p>
-            <p class="text-left" style="color: white; background-color: green" >
+            <p class="text-right" style="color: white; background-color: green" >
                 <?php
                 if( isset($_SESSION['success']) )
                 {
@@ -89,29 +97,12 @@ session_start();
             <form action="../database/editInfo.php" method="post" style="padding: 50px;">
 
 
-                <div class="form-group mb-lg">
-                    <label class="pull-left">Number of Student or Supervisor <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                            <span style="display: inline-block; width: 50%">
-                                 <input name="number" id="sl_number" type="text" class="form-control input-lg" placeholder="student number" required/>
-                            </span>
-                        <span class="pull-right" style="display: inline-block; width: 40%; ">
-                                 <input style="background-color:#06a39f; color: white; " name="search" id="search" type="button" class="form-control input-lg" value="Search"/>
-                            </span>
-
-                    </div>
-                </div>
-
-
-
-
-
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Full Name <span class="required-star">*</span></label>
+                    <label class="pull-right">الاسم الكامل </label>
                     <div class="input-group input-group-icon">
-                        <input name="fullname" id="fullname" type="text" class="form-control input-lg" placeholder="Full Name"
-                               required/>
+                        <input name="fullname" id="fullname" value="<?php echo $info[0]["name"] ?>" type="text" class="form-control input-lg" placeholder="الاسم الكامل"
+                               >
                         <span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-user"></i>
@@ -121,54 +112,67 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">User Type <span class="required-star">*</span></label>
+                    <label class="pull-right">نوع الحساب </label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="user_type" id="user_type">
-                            <option selected disabled>--- Select The User Type ---</option>
-                            <option value="student">Student</option>
-                            <option value="supervisor">Supervisor</option>
+                            <option selected value="student">Student</option>
                         </select>
                     </div>
                 </div>
 
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Birth Date <span class="required-star">*</span></label>
+                    <label class="pull-right">تاريخ الميلاد </label>
                     <div class="input-group input-group-icon">
-                        <input name="Bday" id="Bday" type="text" class="form-control input-lg" required/>
+                        <input name="Bday" id="Bday" value="<?php echo $info[0]["age"] ?>" type="text" class="form-control input-lg" >
 
                     </div>
                 </div>
 
 
-                <div class="form-group mb-lg">
-                    <label class="pull-left">Gender <span class="required-star">*</span></label>
+                <?php
+                    if($info[0]["gender"] == "Male"){
+                        echo ' <div class="form-group mb-lg">
+                         <label class="pull-right">الجنس </label>
                     <div class="input-group input-group-icon">
-                            <span style="  display: inline-block;width: 50%; text-align: left" >
-                                <input name="gender" class="gender" type="radio"  value="Male" /> Male
+                            <span style="  display: inline-block;width: 50%; text-align: right" >
+                                <input name="gender" class="gender" type="radio" checked  value="Male" /> ذكر
                             </span>
-                        <span style="  display: inline-block; width: 50%;text-align: left">
-                                <input name="gender" class="gender" type="radio"  value="Female"/> Female
+                        <span style="  display: inline-block; width: 50%;text-align: right">
+                                <input name="gender" class="gender" type="radio"  value="Female"/> انثى
                             </span>
-
-
-
                     </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-left">Year Level <span class="required-star">*</span></label>
+                </div>';
+                    }else{
+                        echo ' <div class="form-group mb-lg">
+                    <label class="pull-right">الجنس </label>
                     <div class="input-group input-group-icon">
-                        <input name="level" id="level" type="text" class="form-control input-lg" placeholder="Year Level"
-                               required/>
+                            <span style="  display: inline-block;width: 50%; text-align: right" >
+                                <input name="gender" class="gender" type="radio"  value="Male" /> ذكر
+                            </span>
+                        <span style="  display: inline-block; width: 50%;text-align: right">
+                                <input name="gender" class="gender" type="radio" checked  value="Female"/> انثى
+                            </span>
+                           </div>
+                        </div>';
+                    }
+
+                ?>
+
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">المستوى </label>
+                    <div class="input-group input-group-icon">
+                        <input name="level" value="<?php echo $info[0]["level"] ?>" id="level" type="text" class="form-control input-lg" placeholder="المستوى"
+                               >
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Degree Program <span class="required-star">*</span></label>
+                    <label class="pull-right">البرنامج</label>
                     <div class="input-group input-group-icon" >
                         <select class="form-control" name="degree_program" id="degree_program">
-                            <option selected disabled>--- Select The Degree Program ---</option>
+                            <option selected disabled>--- اختار البرنامج ---</option>
                             <option value="Bacholar">Bacholar</option>
 
                         </select>
@@ -176,51 +180,51 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Email <span class="required-star">*</span></label>
+                    <label class="pull-right">ايميل </label>
                     <div class="input-group input-group-icon">
-                        <input name="email" id="email" type="email" class="form-control input-lg" placeholder="username@example.com"
-                               required/>
+                        <input name="email" value="<?php echo $info[0]["email"] ?>" id="email" type="email" class="form-control input-lg" placeholder="username@example.com"
+                               >
                     </div>
                 </div>
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Mobile No. <span class="required-star">*</span></label>
+                    <label class="pull-right">رقم الهاتف </label>
                     <div class="input-group input-group-icon">
-                        <input name="mobile_no" id="mobile_no" type="text" class="form-control input-lg" placeholder="Mobile Number"
-                               required/>
+                        <input name="mobile_no" value="<?php echo $info[0]["mobile_no"] ?>" id="mobile_no" type="text" class="form-control input-lg" placeholder="رقم الهاتف "
+                               >
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Country <span class="required-star">*</span></label>
+                    <label class="pull-right">الدولة </label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="country" id="country">
-                            <option selected disabled>--- Select The Country ---</option>
+                            <option selected disabled>--- اختار الدولة ---</option>
                             <option value="Palestine">Palestine</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Address <span class="required-star">*</span></label>
+                    <label class="pull-right">العنوان </label>
                     <div class="input-group input-group-icon">
-                        <input name="address" id="address" type="text" class="form-control input-lg" placeholder="Your Address ..."
-                               required/>
+                        <input name="address" value="<?php echo $info[0]["address"] ?>" id="address" type="text" class="form-control input-lg" placeholder="العنوان"
+                               >
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Password <span class="required-star">*</span></label>
+                    <label class="pull-right">الرقم السري </label>
                     <div class="input-group input-group-icon">
-                        <input name="pwd" id="pwd" type="password" class="form-control input-lg" placeholder="*************"
-                               required/>
+                        <input name="pwd" id="pwd" type="password" value="<?php echo $info[0]["pwd"] ?>" class="form-control input-lg"
+                               >
                     </div>
                 </div>
 
 
 
                 <div class="row">
-                    <div class="col-sm-4 text-right pull-right">
-                        <button type="submit" class="btn btn-primary hidden-xs">Edit Info</button>
+                    <div class="col-sm-4 text-right pull-left">
+                        <button type="submit" class="btn btn-primary hidden-xs">تعديل المعلومات</button>
                     </div>
                 </div>
 
@@ -269,73 +273,55 @@ session_start();
 </body>
 </html>
 
-<script>
-    $(document).ready(function () {
-        $("#search").on("click",function () {
 
-            var sl_number = $("#sl_number").val();
-            $.ajax({
-                url: "../database/getInfo.php",
-                type: "get",
-                data: {"sl_number":sl_number} ,
-                success: function (res) {
-                    
-                    if (res.length < 2000)
-                        res = JSON.parse(res)
-                    console.log(res)
-                    if (res[0] != undefined) {
-                        $("#fullname").val('')
-                        $('#user_type option').eq(0).prop('selected', true);
-                        $('#degree_program option').eq(0).prop('selected', true);
-                        $('#country option').eq(0).prop('selected', true);
-                        $("#number").val('')
-                        $("#Bday").val('')
-                        $(".gender").prop("checked", false);
-                        $("#level").val('')
-                        $("#email ").val('')
-                        $("#mobile_no").val('')
-                        $("#address").val('')
-                        $("#pwd").val('')
-                        $("#r_pwd").val('')
+<?php
 
-                        // ============================
+function getInfo()
+{
+    $servername = "localhost";
+    $username = "decision_making";
+    $password = "";
 
-                        $("#fullname").val(res[0].name)
-                        $('#user_type').val(res[0].type);
-                        $('#degree_program').val(res[0].degree);
-                        $('#country').val(res[0].country);
-                        $("#number").val(sl_number)
-                        $("#Bday").val(res[0].age)
-                        console.log(res[0].gender)
-                        $('input:radio[name=gender]').filter('[value='+ res[0].gender +']').prop('checked', true);                        $("#level").val(res[0].level)
-                        $("#email ").val(res[0].email)
-                        $("#mobile_no").val(res[0].mobile_no)
-                        $("#address").val(res[0].address)
-                        $("#pwd").val(res[0].pwd)
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root", $password, $username, "3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn, "utf8");
 
-                    }else{
-                        $("#fullname").val('')
-                        $('#user_type option').eq(0).prop('selected', true);
-                        $('#degree_program option').eq(0).prop('selected', true);
-                        $('#country option').eq(0).prop('selected', true);
-                        $("#number").val('')
-                        $("#Bday").val('')
-                        $(".gender").prop("checked", false);
-                        $("#level").val('')
-                        $("#email ").val('')
-                        $("#mobile_no").val('')
-                        $("#address").val('')
-                        $("#pwd").val('')
-                        $("#r_pwd").val('')
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
+    $email = $_SESSION['user_email'];
 
 
-            });
+    $query = "SELECT * FROM `users` WHERE `email` = '" . $email . "'";
 
-    })
-    })
-</script>
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $info = [];
+        while ($row = $result->fetch_assoc()) {
+            array_push($info,
+                ["email" => $row["email"],
+                    "type" => $row["type"],
+                    "name" => $row["name"],
+                    "age" => $row["age"],
+                    "gender" => $row["gender"],
+                    "level" => $row["level"],
+                    "degree" => $row["degree"],
+                    "mobile_no" => $row["mobile_no"],
+                    "country" => $row["country"],
+                    "address" => $row["address"],
+                    "pwd" => $row["password"]
+                ]);
+        }
+
+        return $info;
+        //echo $sl_number;
+    } else {
+        header('Location: ../sign_in.php');
+    }
+}
+?>
+
+

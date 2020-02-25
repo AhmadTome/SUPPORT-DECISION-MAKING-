@@ -24,6 +24,6 @@ $result = $conn->query($query);
 
 if ($result) {
     $_SESSION['success'] = 'The '. $cat_name .' deleted successfully ';
-    header('Location: ../category/deletCategory.php');
+    header('Location: ../admin/deletCategory.php');
 }
 ?>

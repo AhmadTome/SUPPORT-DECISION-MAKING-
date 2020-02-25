@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>تسجيل حساب جديد</title>
+    <title>بحث وتعديل حسابات</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -52,17 +52,27 @@ session_start();
 
 
 </head>
+
+<style>
+    input{
+        text-align: right;
+    }
+</style>
 <body>
+<?php
+include('navbar.html')
+?>
+
 
 <!-- start: page -->
 <div class="limiter">
     <div class="container-login100">
-
         <div class="wrap-login100">
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
-            <p class="text-left" style="color: red">
+
+            <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
                     echo $_SESSION['Error'];
@@ -72,7 +82,7 @@ session_start();
                 }
                 ?>
             </p>
-            <p class="text-left" style="color: white; background-color: green" >
+            <p class="text-right" style="color: white; background-color: green" >
                 <?php
                 if( isset($_SESSION['success']) )
                 {
@@ -83,13 +93,34 @@ session_start();
                 }
                 ?>
             </p>
-            <form name="loginForm" action="../database/register.php" method="post" style="padding: 50px;" onsubmit="return validateForm()" dir="rtl">
+
+            <form action="../database/editInfo.php" method="post" style="padding: 50px;">
+
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">رقم الطالب او المشرف <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                            <span class="pull-right" style="display: inline-block; width: 50%">
+                                 <input name="number" id="sl_number" type="text" class="form-control input-lg" placeholder="رقم الطالب" required/>
+                            </span>
+                        <span class="pull-left" style="display: inline-block; width: 40%; ">
+                                 <input style="background-color:#06a39f; color: white; text-align: center" name="search" id="search" type="button" class="form-control input-lg" value="بحث"/>
+                            </span>
+
+                    </div>
+                </div>
+
+
+
+
+
+
                 <div class="form-group mb-lg">
                     <label class="pull-right">الاسم الكامل <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="fullname" type="text" class="form-control input-lg" placeholder="الاسم الكامل"
+                        <input name="fullname" id="fullname" type="text" class="form-control input-lg" placeholder="الاسم الكامل"
                                required/>
-                        <span class="input-group-addon pull-right">
+                        <span class="input-group-addon">
 										<span class="icon icon-lg">
 											<i class="fa fa-user"></i>
 										</span>
@@ -101,25 +132,18 @@ session_start();
                     <label class="pull-right">نوع الحساب <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="user_type" id="user_type">
-                            <option selected disabled>--- اختيار نوع الحساب ---</option>
+                            <option selected disabled>--- اختار الحساب ---</option>
                             <option value="student">Student</option>
                             <option value="supervisor">Supervisor</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
-                    <label class="pull-right"><span id="user_type_title"></span> الرقم التعريفي <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <input name="number" type="text" class="form-control input-lg" placeholder="الرقم التعريفي"
-                               required/>
-                    </div>
-                </div>
 
                 <div class="form-group mb-lg">
                     <label class="pull-right">تاريخ الميلاد <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="Bday" type="text" class="form-control input-lg" required/>
+                        <input name="Bday" id="Bday" type="text" class="form-control input-lg" required/>
 
                     </div>
                 </div>
@@ -129,10 +153,10 @@ session_start();
                     <label class="pull-right">الجنس <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                             <span style="  display: inline-block;width: 50%; text-align: right" >
-                                <input name="gender" type="radio"  value="Male" /> ذكر
+                                <input name="gender" class="gender" type="radio"  value="Male" /> ذكر
                             </span>
                         <span style="  display: inline-block; width: 50%;text-align: right">
-                                <input name="gender" type="radio"  value="Female"/> انثى
+                                <input name="gender" class="gender" type="radio"  value="Female"/> انثى
                             </span>
 
 
@@ -141,18 +165,18 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">المستوى العلمي <span class="required-star">*</span></label>
+                    <label class="pull-right">المستوى <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="level" type="text" class="form-control input-lg" placeholder="المستوى العلمي"
+                        <input name="level" id="level" type="text" class="form-control input-lg" placeholder="مستواك"
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">الدرجة <span class="required-star">*</span></label>
+                    <label class="pull-right">البرنامج <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon" >
-                        <select class="form-control" name="degree_program">
-                            <option selected disabled>--- اختار الدرجة ---</option>
+                        <select class="form-control" name="degree_program" id="degree_program">
+                            <option selected disabled>--- اختار البرنامج ---</option>
                             <option value="Bacholar">Bacholar</option>
 
                         </select>
@@ -160,16 +184,16 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">ايميل <span class="required-star">*</span></label>
+                    <label class="pull-right">الايميل <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="email" type="email" class="form-control input-lg" placeholder="username@example.com"
+                        <input name="email" id="email" type="email" class="form-control input-lg" placeholder="username@example.com"
                                required/>
                     </div>
                 </div>
                 <div class="form-group mb-lg">
                     <label class="pull-right">رقم الهاتف <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="mobile_no" type="text" class="form-control input-lg" placeholder="Mobile Number"
+                        <input name="mobile_no" id="mobile_no" type="text" class="form-control input-lg" placeholder="رقم الهاتف"
                                required/>
                     </div>
                 </div>
@@ -177,8 +201,8 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-right">الدولة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control" name="country">
-                            <option selected disabled>--- اختر الدولة ---</option>
+                        <select class="form-control" name="country" id="country">
+                            <option selected disabled>--- اختار الدولة ---</option>
                             <option value="Palestine">Palestine</option>
                         </select>
                     </div>
@@ -187,7 +211,7 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-right">العنوان <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="address" type="text" class="form-control input-lg" placeholder="Your Address ..."
+                        <input name="address" id="address" type="text" class="form-control input-lg" placeholder="عنوانك"
                                required/>
                     </div>
                 </div>
@@ -195,24 +219,8 @@ session_start();
                 <div class="form-group mb-lg">
                     <label class="pull-right">الرقم السري <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="pwd" type="password" class="form-control input-lg" placeholder="*************"
+                        <input name="pwd" id="pwd" type="password" class="form-control input-lg" placeholder="*************"
                                required/>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">تأكيد الرقم السري <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <input name="r_pwd" type="password" class="form-control input-lg" placeholder="*************"
-                               required/>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <div class="input-group input-group-icon text-left">
-                        <input class="pull-right" name="username" type="radio" />
-                        <label class="pull-right">&nbsp;وافقت على <span style="color: #00ff09">سياسة البرنامج والمستخدمين</span>&nbsp;</label>
-
                     </div>
                 </div>
 
@@ -220,12 +228,12 @@ session_start();
 
                 <div class="row">
                     <div class="col-sm-4 text-right pull-left">
-                        <button type="submit" class="btn btn-primary hidden-xs">تسجيل حساب جديد</button>
+                        <button type="submit" class="btn btn-primary hidden-xs">تعديل المعلومات</button>
                     </div>
                 </div>
-                <p style="font-size: 18px;">هل لديك حساب بالفعل ؟ <a href="../sign_in.php"> تسجيل الدخول هنا!</a></p>
 
             </form>
+
 
 
         </div>
@@ -271,17 +279,71 @@ session_start();
 
 <script>
     $(document).ready(function () {
-        $("#user_type").on("change",function () {
-            $("#user_type_title").text($(this).val());
-        })
-    });
+        $("#search").on("click",function () {
 
-    function validateForm() {
-        var pass = document.forms["loginForm"]["pwd"].value;
-        var pass_confirm = document.forms["loginForm"]["r_pwd"].value;
-        if (pass != pass_confirm) {
-            alert("The passwords are not matched!");
-            return false;
-        }
-    }
+            var sl_number = $("#sl_number").val();
+            $.ajax({
+                url: "../database/getInfo.php",
+                type: "get",
+                data: {"sl_number":sl_number} ,
+                success: function (res) {
+
+                    if (res.length < 2000)
+                        res = JSON.parse(res)
+                    console.log(res)
+                    if (res[0] != undefined) {
+                        $("#fullname").val('')
+                        $('#user_type option').eq(0).prop('selected', true);
+                        $('#degree_program option').eq(0).prop('selected', true);
+                        $('#country option').eq(0).prop('selected', true);
+                        $("#number").val('')
+                        $("#Bday").val('')
+                        $(".gender").prop("checked", false);
+                        $("#level").val('')
+                        $("#email ").val('')
+                        $("#mobile_no").val('')
+                        $("#address").val('')
+                        $("#pwd").val('')
+                        $("#r_pwd").val('')
+
+                        // ============================
+
+                        $("#fullname").val(res[0].name)
+                        $('#user_type').val(res[0].type);
+                        $('#degree_program').val(res[0].degree);
+                        $('#country').val(res[0].country);
+                        $("#number").val(sl_number)
+                        $("#Bday").val(res[0].age)
+                        console.log(res[0].gender)
+                        $('input:radio[name=gender]').filter('[value='+ res[0].gender +']').prop('checked', true);                        $("#level").val(res[0].level)
+                        $("#email ").val(res[0].email)
+                        $("#mobile_no").val(res[0].mobile_no)
+                        $("#address").val(res[0].address)
+                        $("#pwd").val(res[0].pwd)
+
+                    }else{
+                        $("#fullname").val('')
+                        $('#user_type option').eq(0).prop('selected', true);
+                        $('#degree_program option').eq(0).prop('selected', true);
+                        $('#country option').eq(0).prop('selected', true);
+                        $("#number").val('')
+                        $("#Bday").val('')
+                        $(".gender").prop("checked", false);
+                        $("#level").val('')
+                        $("#email ").val('')
+                        $("#mobile_no").val('')
+                        $("#address").val('')
+                        $("#pwd").val('')
+                        $("#r_pwd").val('')
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+
+
+            });
+
+    })
+    })
 </script>

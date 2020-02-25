@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Add Information</title>
+    <title>اضافة معلومة جديدة</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -68,7 +68,7 @@ $getMareialInfo = getMareialInfo();
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
-            <p class="text-left" style="color: red">
+            <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
                     echo $_SESSION['Error'];
@@ -78,7 +78,7 @@ $getMareialInfo = getMareialInfo();
                 }
                 ?>
             </p>
-            <p class="text-left" style="color: white; background-color: green" >
+            <p class="text-right" style="color: white; background-color: green" >
                 <?php
                 if( isset($_SESSION['success']) )
                 {
@@ -91,10 +91,10 @@ $getMareialInfo = getMareialInfo();
             </p>
             <form action="../database/addInformation.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Category Name <span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة الأقسام <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" id="category_select" name="category_select">
-                            <option selected disabled>--- Select The Category Name ---</option>
+                            <option selected disabled>--- اختار القسم ---</option>
                             <?php
                             for($i=0;$i<count($info);$i++){
                                 echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
@@ -108,10 +108,10 @@ $getMareialInfo = getMareialInfo();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Material Name <span class="required-star">*</span></label>
+                    <label class="pull-right">اسم المادة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="material_select" id="material_select">
-                            <option selected disabled>--- Select The Material Name ---</option>
+                            <option selected disabled>--- اختار المادة ---</option>
                             <?php
                             for($i=0;$i<count($getMareialInfo);$i++){
                                 echo '<option value='. $getMareialInfo[$i]["id"] .'>'. $getMareialInfo[$i]["name"] .'</option>';
@@ -123,15 +123,15 @@ $getMareialInfo = getMareialInfo();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Information <span class="required-star">*</span></label>
+                    <label class="pull-right">المعلومة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="info_name" type="text" class="form-control input-lg" placeholder="Information ..."
+                        <input name="info_name" type="text" class="form-control input-lg text-right" placeholder=" ... المعلومة"
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Information Description <span class="required-star">*</span></label>
+                    <label class="pull-right">الوصف<span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <textarea name="info_desc" class="form-control" rows="8"></textarea>
                     </div>
@@ -139,7 +139,7 @@ $getMareialInfo = getMareialInfo();
 
 
 
-                <p class="text-left" style="color: red">
+                <p class="text-right" style="color: red">
                     <?php
                     if (isset($_SESSION['Error'])) {
                         echo $_SESSION['Error'];
@@ -152,8 +152,8 @@ $getMareialInfo = getMareialInfo();
 
 
                 <div class="row">
-                    <div class="col-sm-4 text-right pull-right">
-                        <button type="submit" class="btn btn-primary hidden-xs">Add</button>
+                    <div class="col-sm-4 text-right pull-left">
+                        <button type="submit" class="btn btn-primary hidden-xs">إضافة</button>
                     </div>
                 </div>
 

@@ -25,7 +25,7 @@ $query = "INSERT INTO `category`(`name`, `description`) VALUES ('$cat_name',' $c
 $result = $conn->query($query);
 
 if($result) {
-        header('Location: ../category/addCategory.php');
+        header('Location: ../admin/addCategory.php');
         $_SESSION['success'] = 'The '. $cat_name .' added successfully ';
 
 }

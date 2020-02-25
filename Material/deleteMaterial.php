@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Delete Material</title>
+    <title>حذف المواد</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -65,7 +65,7 @@ session_start();
 
             $info = getInfo();
             ?>
-            <p class="text-left" style="color: red">
+            <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
                     echo $_SESSION['Error'];
@@ -75,7 +75,7 @@ session_start();
                 }
                 ?>
             </p>
-            <p class="text-left" style="color: white; background-color: green" >
+            <p class="text-right" style="color: white; background-color: green" >
                 <?php
                 if( isset($_SESSION['success']) )
                 {
@@ -88,10 +88,10 @@ session_start();
             </p>
             <form action="../database/deleteMaterial.php" method="post" style="padding: 50px">
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Category Name <span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة الأقسام <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" id="category_select" name="category_select">
-                            <option selected disabled>--- Select The Category Name ---</option>
+                            <option selected disabled>--- اختار اسم القسم ---</option>
                             <?php
                             for($i=0;$i<count($info);$i++){
                                 echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
@@ -105,25 +105,25 @@ session_start();
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Material Name <span class="required-star">*</span></label>
+                    <label class="pull-right">قائمة المواد <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="material_select" id="material_select">
-                            <option selected disabled>--- Select The Material Name ---</option>
+                            <option selected disabled>--- اختار اسم المادة ---</option>
 
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Material Name <span class="required-star">*</span></label>
+                    <label class="pull-right">اسم المادة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="mat_name" id="mat_name" type="text" class="form-control input-lg" placeholder="Material Name"
+                        <input name="mat_name" id="mat_name" type="text" class="form-control input-lg text-right" placeholder="اسم المادة"
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Material Description <span class="required-star">*</span></label>
+                    <label class="pull-right">وصف المادة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <textarea name="mat_desc" id="mat_desc" class="form-control" rows="8"></textarea>
                     </div>
@@ -132,8 +132,8 @@ session_start();
 
 
                 <div class="row">
-                    <div class="col-sm-4 text-right pull-right">
-                        <button type="submit" class="btn btn-primary hidden-xs">Delete</button>
+                    <div class="col-sm-4 text-right pull-left">
+                        <button type="submit" class="btn btn-primary hidden-xs">حذف</button>
                     </div>
                 </div>
 

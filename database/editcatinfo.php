@@ -27,7 +27,7 @@ $result = $conn->query($query);
 
 if($result) {
     echo "Succesfully Updated!";
-        header('Location: ../category/editCategory.php');
+        header('Location: ../admin/editCategory.php');
         $_SESSION['success'] = 'The '. $cat_name .' Information Updated successfully ';
 }
 else {

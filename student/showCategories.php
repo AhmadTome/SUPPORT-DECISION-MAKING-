@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>Register Page For Student</title>
+    <title>الأقسام</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -53,7 +53,9 @@ session_start();
 
 </head>
 <body>
-
+<?php
+include ('navbar.html')
+?>
 <!-- start: page -->
 <div class="limiter">
     <div class="container-login100">
@@ -62,7 +64,10 @@ session_start();
 
             </div>
 
+            <?php
 
+            $info = getInfo();
+            ?>
             <p class="text-left" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
@@ -84,53 +89,45 @@ session_start();
                 }
                 ?>
             </p>
-            <form action="../database/deleteInfo.php" method="post" style="padding: 50px;">
+            <form action="../database/editcatinfo.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-left">Student Number <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                            <span style="display: inline-block; width: 50%">
-                                 <input name="sl_number" id="sl_number" type="text" class="form-control input-lg" placeholder="Number of student or supervisor" required/>
-                            </span>
-                        <span class="pull-right" style="display: inline-block; width: 40%; ">
-                                 <input style="background-color:#06a39f; color: white; " name="search" id="search" type="button" class="form-control input-lg" value="Search"/>
-                            </span>
+                    <label class="pull-right">اسم القسم</label>
+                    <div class="input-group input-group-icon" >
+                        <select class="form-control" id="category_select" name="category_select" >
+                            <option selected disabled >--- اختار اسم القسم ---</option>
+                            <?php
+                            for($i=0;$i<count($info);$i++){
+                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
+                            }
 
+                            ?>
+                            ?>
+
+                        </select>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
+                    <label class="pull-right">اسم القسم </label>
                     <div class="input-group input-group-icon">
-                            <span style="display: inline-block; width: 50%">
-                        <label class="pull-left">The Name <span class="required-star">*</span></label>
-                            </span>
-                        <span style="display: inline-block; width: 50%">
-                                 <input name="name" id="name" type="text" class="form-control input-lg" readonly/>
-                            </span>
+                        <input name="cat_name" id="cat_name" type="text" class="form-control input-lg" placeholder="Category Name"
+                               required/>
+                    </div>
+                </div>
 
-
+                <div class="form-group mb-lg">
+                    <label class="pull-right">وصف القسم</label>
+                    <div class="input-group input-group-icon">
+                        <textarea name="cat_desc" id="cat_desc" class="form-control" rows="8"></textarea>
                     </div>
                 </div>
 
 
-                <p class="text-left" style="color: red">
-                    <?php
-                    if (isset($_SESSION['Error'])) {
-                        echo $_SESSION['Error'];
 
-                        unset($_SESSION['Error']);
-
-                    }
-                    ?>
-                </p>
-
-
-                <div class="row">
-                    <div class="col-sm-4 text-right pull-right">
-                        <button type="submit" class="btn btn-primary hidden-xs">Delete</button>
-                    </div>
-                </div>
 
             </form>
+
+
 
 
 
@@ -174,22 +171,23 @@ session_start();
 
 </body>
 </html>
-
 <script>
+
     $(document).ready(function () {
-
-        $("#search").on("click",function () {
-            var sl_number = $("#sl_number").val();
-
+        $("#category_select").on("change",function () {
+            var id = $(this).val();
 
             $.ajax({
-                url: "../database/getInfo.php",
+                url: "../database/getcatInfo.php",
                 type: "get",
-                data: {"sl_number":sl_number} ,
+                data: {"id":id} ,
                 success: function (res) {
-                    if (res.length < 2000)
-                        res = JSON.parse(res)
-                     $("#name").val(res[0].name)
+
+
+                    res = JSON.parse(res)
+                    $("#cat_name").val(res[0].name)
+                    $("#cat_desc").val(res[0].description)
+
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus, errorThrown);
@@ -197,7 +195,50 @@ session_start();
 
 
             });
-        });
 
+        })
     })
+
 </script>
+
+<?php
+
+function getInfo(){
+    $servername = "localhost";
+    $username = "decision_making";
+    $password = "";
+
+// Create connection
+//$conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
+// Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn,"utf8");
+
+
+
+
+    $query = "SELECT * FROM `category`";
+
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        $info = [];
+        while ($row = $result->fetch_assoc()) {
+            array_push($info,
+                ["name" => $row["name"],
+                    "description" => $row["description"],
+                    "id" => $row["id"]
+                ]);
+        }
+        return $info;
+        //echo $sl_number;
+    } else {
+        header('Location: ../sign_in.php');
+    }
+}
+
+
+?>

@@ -5,7 +5,7 @@ session_start();
     <!doctype html>
     <html class="fixed">
     <head>
-        <title>Delete Category Information</title>
+        <title>حذف القسم</title>
         <!-- Basic -->
         <meta charset="UTF-8">
 
@@ -53,7 +53,9 @@ session_start();
 
     </head>
     <body>
-
+    <?php
+    include ('navbar.html')
+    ?>
     <!-- start: page -->
     <div class="limiter">
         <div class="container-login100">
@@ -66,7 +68,7 @@ session_start();
 
                 $info = getInfo();
                 ?>
-                <p class="text-left" style="color: red">
+                <p class="text-right" style="color: red">
                     <?php
                     if (isset($_SESSION['Error'])) {
                         echo $_SESSION['Error'];
@@ -76,7 +78,7 @@ session_start();
                     }
                     ?>
                 </p>
-                <p class="text-left" style="color: white; background-color: green" >
+                <p class="text-right" style="color: white; background-color: green" >
                     <?php
                     if( isset($_SESSION['success']) )
                     {
@@ -89,10 +91,10 @@ session_start();
                 </p>
                 <form action="../database/deletecatinfo.php" method="post" style="padding: 50px;">
                     <div class="form-group mb-lg">
-                        <label class="pull-left">Category Name <span class="required-star">*</span></label>
+                        <label class="pull-right">اسم القسم <span class="required-star">*</span></label>
                         <div class="input-group input-group-icon">
                             <select class="form-control" id="category_select" name="category_select">
-                                <option selected disabled>--- Select The Category Name ---</option>
+                                <option selected disabled>--- اختار القسم ---</option>
                                 <?php
                                 for($i=0;$i<count($info);$i++){
                                     echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
@@ -106,22 +108,22 @@ session_start();
                     </div>
 
                     <div class="form-group mb-lg">
-                        <label class="pull-left">Category Name <span class="required-star">*</span></label>
+                        <label class="pull-right">اسم القسم <span class="required-star">*</span></label>
                         <div class="input-group input-group-icon">
-                            <input name="cat_name" id="cat_name" type="text" class="form-control input-lg" placeholder="Category Name"
+                            <input name="cat_name" id="cat_name" type="text" class="form-control input-lg" placeholder="اسم القسم"
                                    required/>
                         </div>
                     </div>
 
                     <div class="form-group mb-lg">
-                        <label class="pull-left">Category Description <span class="required-star">*</span></label>
+                        <label class="pull-right">وصف القسم <span class="required-star">*</span></label>
                         <div class="input-group input-group-icon">
                             <textarea name="cat_desc" id="cat_desc" class="form-control" rows="8"></textarea>
                         </div>
                     </div>
 
 
-                    <p class="text-left" style="color: red">
+                    <p class="text-right" style="color: red">
                         <?php
                         if (isset($_SESSION['Error'])) {
                             echo $_SESSION['Error'];
@@ -134,8 +136,8 @@ session_start();
 
 
                     <div class="row">
-                        <div class="col-sm-4 text-right pull-right">
-                            <button type="submit" class="btn btn-primary hidden-xs">Delete</button>
+                        <div class="col-sm-4 text-right pull-left">
+                            <button type="submit" class="btn btn-primary hidden-xs">حذف</button>
                         </div>
                     </div>
 

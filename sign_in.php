@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 	<head>
-		<title>Login Page</title>
+		<title>تسجيل دخول</title>
 		<!-- Basic -->
 		<meta charset="UTF-8">
 
@@ -26,25 +26,31 @@ session_start();
 
                 </div>
 
-                <form class="login100-form validate-form" action="database/login.php" method="post">
+                <form class="login100-form validate-form" action="database/login.php" method="post" dir="rtl">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                        <span class="label-input100">Username</span>
-                        <input class="input100" type="text" name="username" placeholder="Enter username">
+                        <label>اسم المستخدم</label>
+                        <input class="input100" type="text" name="username" placeholder="ادخل اسم المستخدم" required>
+
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
-                        <span class="label-input100">Password</span>
-                        <input class="input100" type="password" name="pwd" placeholder="Enter password">
+                        <label>كلمة المرور</label>
+                        <input class="input100" type="password" name="pwd" placeholder="***********" required>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="row col-sm-12">
-                    <div class=" pull-right">
-                        <button type="submit" class="login100-form-btn">
-                            Login
+                    <div class="pull-left">
+                        <button type="submit" class="btn btn-success">
+                            تسجيل الدخول
                         </button>
                     </div>
+<br>
+<br>
+<br>
+                        <p style="font-size: 18px;">هل تريد تسجيل حساب جديد ؟ <a href="student/register.php"> تسجيل حساب جديد!</a></p>
+
                 </form>
             </div>
         </div>
