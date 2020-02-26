@@ -225,7 +225,7 @@ include ('navbar.html');
                         <button type="submit" class="btn btn-primary hidden-xs">تسجيل حساب جديد</button>
                     </div>
                 </div>
-                <p style="font-size: 18px;">هل لديك حساب بالفعل ؟ <a href="../sign_in.php"> تسجيل الدخول هنا!</a></p>
+                <!-- <p style="font-size: 18px;">هل لديك حساب بالفعل ؟ <a href="../sign_in.php"> تسجيل الدخول هنا!</a></p> -->
 
             </form>
 
@@ -274,7 +274,7 @@ include ('navbar.html');
 <script>
     $(document).ready(function () {
         $("#user_type").on("change",function () {
-            $("#user_type_title").text($(this).val());
+            //$("#user_type_title").text($(this).val());
         })
     });
 

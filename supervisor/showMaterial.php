@@ -54,7 +54,7 @@ session_start();
 </head>
 <body>
 <?php
-include ('navbar.html')
+include('navbar.html')
 ?>
 
 

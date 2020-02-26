@@ -59,7 +59,7 @@ session_start();
 </style>
 <body>
 <?php
-include ('navbar.html')
+include('navbar.html')
 ?>
 <?php
 $info = getInfo();

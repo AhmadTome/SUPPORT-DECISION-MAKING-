@@ -49,7 +49,7 @@ session_start();
 <br>
 <br>
 <br>
-                        <p style="font-size: 18px;">هل تريد تسجيل حساب جديد ؟ <a href="admin/register.php"> تسجيل حساب جديد!</a></p>
+                       <!-- <p style="font-size: 18px;">هل تريد تسجيل حساب جديد ؟ <a href="admin/register.php"> تسجيل حساب جديد!</a></p> -->
 
                 </form>
             </div>
