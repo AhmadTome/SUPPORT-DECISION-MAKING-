@@ -17,9 +17,14 @@ $username = $_POST['username'];
 $pwd = $_POST['pwd'];
 
 
+if(is_numeric($pwd)){
+    $query = "select * from  `users` where email = '".$username."' and password=".$pwd;
 
-$query = "select * from  `users` where email = '".$username."' and password=".$pwd;
-echo $query;
+}else{
+    $query = "select * from  `users` where email = '".$username."' and password='".$pwd."'";
+
+}
+
 $result = $conn->query($query);
 if ($result->num_rows > 0) {
     $_SESSION['user_email'] = $username;

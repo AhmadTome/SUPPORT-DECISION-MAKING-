@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="caf3b49c-8e88-4c52-854b-e0601560d5de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_in.php" beforeDir="false" afterPath="$PROJECT_DIR$/sign_in.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/editPersonalInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/editPersonalInfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/showCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showCategories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/showInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/showMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showMaterial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supervisor/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/navbar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/register.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sign_in.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="227" column="126" selection-start-line="227" selection-start-column="126" selection-end-line="227" selection-end-column="126" />
+            <state relative-caret-position="867">
+              <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -125,16 +126,16 @@
         <option value="$PROJECT_DIR$/database/deleteInfo.php" />
         <option value="$PROJECT_DIR$/admin/navbar.html" />
         <option value="$PROJECT_DIR$/supervisor/navbar.html" />
-        <option value="$PROJECT_DIR$/database/login.php" />
         <option value="$PROJECT_DIR$/sign_in.php" />
         <option value="$PROJECT_DIR$/admin/register.php" />
+        <option value="$PROJECT_DIR$/database/login.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1712" />
+    <option name="y" value="18" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -152,11 +153,6 @@
               <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
               <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -166,7 +162,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/social_media" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -226,18 +222,19 @@
       <workItem from="1582616746369" duration="21000" />
       <workItem from="1582644349828" duration="3365000" />
       <workItem from="1582659006466" duration="3158000" />
-      <workItem from="1582732463610" duration="1514000" />
+      <workItem from="1582732463610" duration="1628000" />
+      <workItem from="1584370684912" duration="1942000" />
+      <workItem from="1584544515700" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67390000" />
+    <option name="totallyTimeSpent" value="69504000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1928" y="-225" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22617246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -609,24 +606,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/login.php">
+    <entry file="file://$PROJECT_DIR$/admin/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        <state relative-caret-position="331">
+          <caret line="227" column="126" selection-start-line="227" selection-start-column="126" selection-end-line="227" selection-end-column="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sign_in.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="867">
           <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/register.php">
+    <entry file="file://$PROJECT_DIR$/database/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="227" column="126" selection-start-line="227" selection-start-column="126" selection-end-line="227" selection-end-column="126" />
+        <state relative-caret-position="340">
+          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
         </state>
       </provider>
     </entry>
