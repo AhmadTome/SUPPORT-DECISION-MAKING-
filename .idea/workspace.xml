@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caf3b49c-8e88-4c52-854b-e0601560d5de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/supervisor/LecturerInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supervisor/numberOfLecturers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supervisor/numberOfMdoctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/navbar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +20,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sign_in.php">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfLecturers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+            <state relative-caret-position="-80">
+              <caret line="134" column="53" lean-forward="true" selection-start-line="134" selection-start-column="53" selection-end-line="134" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfMdoctor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="164" column="84" selection-start-line="164" selection-start-column="58" selection-end-line="164" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="378" column="55" selection-start-line="378" selection-start-column="43" selection-end-line="378" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/LecturerInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="198" column="63" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="63" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="164" column="84" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/login.php">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+            <state relative-caret-position="430">
+              <caret line="164" column="84" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -64,6 +121,8 @@
       <find>left</find>
       <find>chang</find>
       <find>supervisor</find>
+      <find>Palestine</find>
+      <find>Palestinian Territory, Occupied</find>
     </findStrings>
     <replaceStrings>
       <replace>#06a39f</replace>
@@ -78,12 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/editcatinfo.php4" />
-        <option value="$PROJECT_DIR$/category/editCategory.php" />
-        <option value="$PROJECT_DIR$/category/deletCategory.php" />
-        <option value="$PROJECT_DIR$/database/getMaterialInfo.php" />
-        <option value="$PROJECT_DIR$/database/getInformation.php" />
-        <option value="$PROJECT_DIR$/database/getInformatonById.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/database/addCategory.php" />
         <option value="$PROJECT_DIR$/database/editcatinfo.php" />
@@ -125,10 +178,16 @@
         <option value="$PROJECT_DIR$/database/editInfo.php" />
         <option value="$PROJECT_DIR$/database/deleteInfo.php" />
         <option value="$PROJECT_DIR$/admin/navbar.html" />
-        <option value="$PROJECT_DIR$/supervisor/navbar.html" />
         <option value="$PROJECT_DIR$/sign_in.php" />
-        <option value="$PROJECT_DIR$/admin/register.php" />
         <option value="$PROJECT_DIR$/database/login.php" />
+        <option value="$PROJECT_DIR$/supervisor/lecturers_info.php" />
+        <option value="$PROJECT_DIR$/supervisor/numberOfLecturers.php" />
+        <option value="$PROJECT_DIR$/admin/register.php" />
+        <option value="$PROJECT_DIR$/supervisor/LecturerInfo.php" />
+        <option value="$PROJECT_DIR$/supervisor/navbar.html" />
+        <option value="$PROJECT_DIR$/supervisor/numberOfMdoctor.php" />
+        <option value="$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php" />
+        <option value="$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php" />
       </list>
     </option>
   </component>
@@ -145,7 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,16 +211,27 @@
               <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
               <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUPPORT DECISION MAKING" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SUPPORT DECISION MAKING" type="462c0819:PsiDirectoryNode" />
+              <item name="supervisor" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/xampp/htdocs/social_media" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -225,16 +294,18 @@
       <workItem from="1582732463610" duration="1628000" />
       <workItem from="1584370684912" duration="1942000" />
       <workItem from="1584544515700" duration="58000" />
+      <workItem from="1584546980330" duration="842000" />
+      <workItem from="1584552855888" duration="3987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69504000" />
+    <option name="totallyTimeSpent" value="74333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-225" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -255,63 +326,11 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/images/bg-01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/invoice-logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/logo-light.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/connectionDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js_include.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css_include.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="35" column="66" selection-end-line="35" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/register.php" />
     <entry file="file://$PROJECT_DIR$/database/getcatInfo.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="94" column="98" selection-start-line="94" selection-start-column="98" selection-end-line="94" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/addMaterial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -532,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="62" selection-start-line="62" selection-end-line="64" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/editInf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
@@ -589,41 +594,100 @@
     <entry file="file://$PROJECT_DIR$/helper/kill_session.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/showCategories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="9" selection-end-line="244" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="87" lean-forward="true" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="378" column="55" selection-start-line="378" selection-start-column="43" selection-end-line="378" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-732">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="396">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/showCategories.php">
+    <entry file="file://$PROJECT_DIR$/supervisor/LecturerInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="396">
+          <caret line="198" column="63" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/register.php">
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfLecturers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="227" column="126" selection-start-line="227" selection-start-column="126" selection-end-line="227" selection-end-column="126" />
+        <state relative-caret-position="-80">
+          <caret line="134" column="53" lean-forward="true" selection-start-line="134" selection-start-column="53" selection-end-line="134" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sign_in.php">
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfMdoctor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="140" selection-start-line="51" selection-start-column="140" selection-end-line="51" selection-end-column="140" />
+        <state relative-caret-position="430">
+          <caret line="164" column="84" selection-start-line="164" selection-start-column="58" selection-end-line="164" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/login.php">
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
+        <state relative-caret-position="544">
+          <caret line="164" column="84" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="164" column="84" selection-start-line="164" selection-start-column="84" selection-end-line="164" selection-end-column="84" />
         </state>
       </provider>
     </entry>
