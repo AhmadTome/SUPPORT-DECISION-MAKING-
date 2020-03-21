@@ -16,12 +16,15 @@ mysqli_set_charset($conn,"utf8");
 $category_id = $_POST['category_select'];
 $mat_name = $_POST['mat_name'];
 $mat_desc = $_POST['mat_desc'];
+$elective_course = $_POST['elective_course'];
+$department = $_POST['department'];
+$hour_number = $_POST['hour_number'];
+$hour_number_each_semester = $_POST['hour_number_each_semester'];
 $file = uploadfile();
 
 
-
-
-$query = "INSERT INTO `material`(`name`, `description`, `file`, `cat_id`) VALUES ('$mat_name',' $mat_desc ','$file','$category_id')";
+$query = "INSERT INTO `material`(`name`, `description`, `file`, `cat_id`,`elective_course`, `department`, `hour_number`, `hour_number_each_semester`)
+ VALUES ('$mat_name',' $mat_desc ','$file','$category_id','$elective_course','$department','$hour_number','$hour_number_each_semester')";
 
 
 $result = $conn->query($query);

@@ -63,6 +63,10 @@ session_start();
                 <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
                 </div>
+                <h4 style="text-align: center;">
+                    كلية العلوم والآداب في محافزة الراس مركز المعلومات
+
+                </h4>
                 <?php
 
                 $info = getInfo();

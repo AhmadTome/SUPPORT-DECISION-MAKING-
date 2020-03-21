@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>حذف معلومة</title>
+    <title>تسجيل زيارة جديدة</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -54,7 +54,11 @@ session_start();
 </head>
 <body>
 <?php
-include ('navbar.html');
+
+if($_SESSION['user_type'] == "sadmin")
+    include ('navbar.html');
+else
+    include ('../supervisor/navbar.html');
 ?>
 <!-- start: page -->
 <div class="limiter">
@@ -67,11 +71,6 @@ include ('navbar.html');
                 كلية العلوم والآداب في محافزة الراس مركز المعلومات
 
             </h4>
-            <?php
-
-            $info = getInfo();
-
-            ?>
             <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
@@ -93,61 +92,49 @@ include ('navbar.html');
                 }
                 ?>
             </p>
-            <form action="../database/deleteInformation.php" method="post" style="padding: 50px;">
+            <form action="../database/addVisit.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة الاقسام <span class="required-star">*</span></label>
+                    <label class="pull-right">إسم المدرسة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control" id="category_select" name="category_select">
-                            <option selected disabled>--- اختار اسم القسم ---</option>
-                            <?php
-                            for($i=0;$i<count($info);$i++){
-                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
-                            }
-
-                            ?>
-
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة المواد  <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <select class="form-control" name="material_select" id="material_select">
-                            <option selected disabled>--- اختار اسم المادة ---</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">قائمة المعلومات <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <select class="form-control" name="Information_select" id="Information_select">
-                            <option selected disabled>--- اختار اسم المعلومة ---</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">المعلومة <span class="required-star">*</span></label>
-                    <div class="input-group input-group-icon">
-                        <input name="info_name" id="info_name" type="text" class="form-control input-lg text-right" placeholder="المعلومة"
+                        <input name="school_name" type="text" class="form-control input-lg text-right" placeholder="اسم المدرسة"
                                required/>
                     </div>
                 </div>
 
                 <div class="form-group mb-lg">
-                    <label class="pull-right">الوصف <span class="required-star">*</span></label>
+                    <label class="pull-right">عدد الطلاب<span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <textarea name="info_description" id="info_description" class="form-control" rows="8"></textarea>
+                        <input name="numberOfStudent" type="text" class="form-control input-lg text-right" placeholder="عدد الطلاب"
+                               required/>
                     </div>
                 </div>
 
 
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">الفصل الدراسي من هذا العام<span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <select class="form-control" name="semester">
+                            <option selected disabled>--- اختار الفصل الدراسي ---</option>
+                            <option value="فصل أول"> فصل أول</option>
+                            <option value="فصل ثاني"> فصل ثاني</option>
+
+
+
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mb-lg">
+                    <label class="pull-right">العام<span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <input name="year" type="text" class="form-control input-lg text-right" placeholder="2020"
+                               required/>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-sm-4 text-right pull-left">
-                        <button type="submit" class="btn btn-primary hidden-xs " >حذف</button>
+                        <button type="submit" class="btn btn-primary hidden-xs">اضافة</button>
                     </div>
                 </div>
 
@@ -197,120 +184,3 @@ include ('navbar.html');
 
 </body>
 </html>
-
-<script>
-    $(document).ready(function () {
-        $("#category_select").on("change",function () {
-            var cat_id = $(this).val();
-
-            $.ajax({
-                url: "../database/getMaterialInfo.php",
-                type: "get",
-                data: {"cat_id":cat_id,"mat_id":0} ,
-                success: function (res) {
-                    $("#material_select").empty();
-                    $("#mat_name").val('')
-                    $("#mat_desc").val('')
-                    res = JSON.parse(res);
-                    $("#material_select").append('<option selected disabled>--- Select The Material Name ---</option>');
-                    for(var i=0;i<res.length;i++){
-                        $("#material_select").append('<option value='+ res[i]["id"] +'>'+ res[i]["name"] +'</option>');
-                    }
-
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-        })
-
-
-        var info_name = 'hi';
-        var info_description = 'hihi';
-
-        $("#material_select").on("change",function () {
-            var mat_id = $(this).val();
-            var cat_id = $("#category_select").val();
-            $.ajax({
-                url: "../database/getInformation.php",
-                type: "get",
-                data: {"mat_id":mat_id,"cat_id":cat_id} ,
-                success: function (res) {
-                    $("#Information_select").empty();
-                    $("#info_name").val('')
-                    $("#info_description").val('')
-                    res = JSON.parse(res);
-                    $("#Information_select").append('<option selected disabled>--- Select Information Name ---</option>');
-                    for(var i=0;i<res.length;i++){
-                        $("#Information_select").append('<option value='+ res[i]["id"] +'>'+ res[i]["name"] +'</option>');
-                    }
-
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-        });
-
-        $("#Information_select").on("change",function () {
-            var id = $(this).val();
-            $.ajax({
-                url: "../database/getInformatonById.php",
-                type: "get",
-                data: {"id":id} ,
-                success: function (res) {
-                    res = JSON.parse(res);
-                    $("#info_name").val(res[0]["name"]);
-                    $("#info_description").val(res[0]["description"]);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-
-        })
-    })
-</script>
-
-
-<?php
-
-function getInfo(){
-    $servername = "localhost";
-    $username = "decision_making";
-    $password = "";
-
-// Create connection
-//$conn = mysqli_connect($servername, $username, $password);
-    $conn = mysqli_connect($servername, "root",$password, $username,"3306");
-// Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn,"utf8");
-
-
-
-
-    $query = "SELECT * FROM `category`";
-
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        $info = [];
-        while ($row = $result->fetch_assoc()) {
-            array_push($info,
-                ["name" => $row["name"],
-                    "description" => $row["description"],
-                    "id" => $row["id"]
-                ]);
-        }
-        return $info;
-        //echo $sl_number;
-    }
-}
-
-
-?>

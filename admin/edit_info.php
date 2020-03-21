@@ -71,7 +71,10 @@ include('navbar.html')
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <h4 style="text-align: center;">
+                كلية العلوم والآداب في محافزة الراس مركز المعلومات
 
+            </h4>
             <p class="text-right" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {

@@ -25,15 +25,17 @@ $mobile_no = $_POST['mobile_no'];
 $country = $_POST['country'];
 $address = $_POST['address'];
 $pwd = $_POST['pwd'];
+$department = $_POST['department'];
+$gradulation_year = $_POST['gradulation_year'];
 
 
 
 $query = "INSERT INTO `users`
 ( `email`, `password`, `type`, `name`, `age`,
  `number`, `gender`, `level`, `degree`, `mobile_no`,
-  `country`, `address`) 
+  `country`, `address`, `department`, `gradulation_year`) 
   VALUES ('$email',' $pwd ','$user_type','$fullname','$Bday','$number'
-  ,'$gender','$level','$degree_program','$mobile_no','$country','$address')";
+  ,'$gender','$level','$degree_program','$mobile_no','$country','$address','$department','$gradulation_year')";
 
 
 $result = $conn->query($query);
@@ -50,6 +52,6 @@ if($result) {
 }
 else {
     $_SESSION['Error'] = "An error has occurred, please make sure that all field filled correctly";
-    header('Location: ../sign_up.php');
+    header('Location: ../sign_in.php');
 }
 ?>

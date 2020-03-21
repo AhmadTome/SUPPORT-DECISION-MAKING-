@@ -63,6 +63,10 @@ include ('navbar.html');
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <h4 style="text-align: center;">
+                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+
+            </h4>
             <?php
 
             $info = getInfo();
@@ -129,17 +133,51 @@ include ('navbar.html');
                     </div>
                 </div>
 
+                <div class="form-group mb-lg">
+                    <label class="pull-right">هل المادة حرة ؟ <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <select class="form-control" name="elective_course">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
 
-                <p class="text-right" style="color: red">
-                    <?php
-                    if (isset($_SESSION['Error'])) {
-                        echo $_SESSION['Error'];
+                <div class="form-group mb-lg">
+                    <label class="pull-right">القسم <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <select class="form-control" name="department">
+                            <option selected disabled>--- اختار القسم ---</option>
+                            <option value="موظف">موظف</option>
+                            <option value="كلية الشريعة">كلية الشريعة</option>
+                            <option value="كلية المجتمع">كلية المجتمع</option>
+                            <option value="الكليات العربية والإنسانية">الكليات العربية والإنسانية</option>
+                            <option value="كليات العلوم والآداب">كليات العلوم والآداب</option>
+                            <option value="الكليات الهندسية والعلمية">الكليات الهندسية والعلمية</option>
+                            <option value="الكليات الصحية">الكليات الصحية</option>
+                            <option value="الارشاد الأكاديمي">الارشاد الأكاديمي</option>
 
-                        unset($_SESSION['Error']);
 
-                    }
-                    ?>
-                </p>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">الساعات الدراسية <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <input name="hour_number" type="text" class="form-control input-lg text-right" placeholder="الساعات الدراسية"
+                               required/>
+                    </div>
+                </div>
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">عدد الساعات في كل فصل <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <input name="hour_number_each_semester" type="text" class="form-control input-lg text-right" placeholder="عدد الساعات في كل فصل"
+                               required/>
+                    </div>
+                </div>
 
 
                 <div class="row">

@@ -64,6 +64,10 @@ include ('navbar.html');
             <div style="width: 100%;background-image: url(../img/logo.png);height: 150px; background-repeat: no-repeat;background-position: center;">
 
             </div>
+            <h4 style="text-align: center;">
+                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+
+            </h4>
             <p class="text-left" style="color: red">
                 <?php
                 if (isset($_SESSION['Error'])) {
@@ -145,8 +149,42 @@ include ('navbar.html');
                 <div class="form-group mb-lg">
                     <label class="pull-right">المستوى العلمي <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="level" type="text" class="form-control input-lg" placeholder="المستوى العلمي"
-                               required/>
+                        <select class="form-control" name="level">
+                            <option selected disabled>--- اختار المستوى التعليمي ---</option>
+                            <option value="موظف">موظف</option>
+                            <option value="سنة أولى فصل أول">سنة أولى فصل أول</option>
+                            <option value="سنة أولى فصل ثاني">سنة أولى فصل ثاني</option>
+                            <option value="سنة ثانية فصل أول">سنة ثانية فصل أول</option>
+                            <option value="سنة ثانية فصل ثاني">سنة ثانية فصل ثاني</option>
+                            <option value="سنة ثالثة فصل أول">سنة ثالثة فصل أول</option>
+                            <option value="سنة ثالثة فصل ثاني">سنة ثالثة فصل ثاني</option>
+                            <option value="سنة رابعة فصل أول">سنة رابعة فصل أول</option>
+                            <option value="سنة رابعة فصل ثاني">سنة رابعة فصل ثاني</option>
+                            <option value="سنة خامسة فصل أول">سنة خامسة فصل أول</option>
+                            <option value="سنة خامسة فصل ثاني">سنة خامسة فصل ثاني</option>
+
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">القسم <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <select class="form-control" name="department">
+                            <option selected disabled>--- اختار القسم ---</option>
+                            <option value="موظف">موظف</option>
+                            <option value="كلية الشريعة">كلية الشريعة</option>
+                            <option value="كلية المجتمع">كلية المجتمع</option>
+                            <option value="الكليات العربية والإنسانية">الكليات العربية والإنسانية</option>
+                            <option value="كليات العلوم والآداب">كليات العلوم والآداب</option>
+                            <option value="الكليات الهندسية والعلمية">الكليات الهندسية والعلمية</option>
+                            <option value="الكليات الصحية">الكليات الصحية</option>
+                            <option value="الارشاد الأكاديمي">الارشاد الأكاديمي</option>
+
+
+
+                        </select>
                     </div>
                 </div>
 
@@ -162,6 +200,14 @@ include ('navbar.html');
                             <option value="profosor">بروفوسور</option>
 
                         </select>
+                    </div>
+                </div>
+
+                <div class="form-group mb-lg">
+                    <label class="pull-right">سنة التخرج <span class="required-star">*</span></label>
+                    <div class="input-group input-group-icon">
+                        <input name="gradulation_year" type="date" class="form-control input-lg" placeholder="اكتب السنة مثل 2020 او اتركها فارغة اذا المستخدم محاضر"
+                               required/>
                     </div>
                 </div>
 
