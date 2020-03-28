@@ -3,26 +3,99 @@
 
         <ul class="nav navbar-nav text-right" dir="rtl" style="float: right; margin-right: 100px;">
             <li><a href="../helper/kill_session.php">تسجيل خروج</a></li>
-            <li><a href="StudentVisit.php">تسجيل زيارة جديدة</a></li>
-            <li><a href="addClassRoom.php">اضافة قاعدة دراسية</a></li>
-            <li><a href="addHoner.php">تسجيل الطلبة الطلبة الحاصلين على مرتبة شرف</a></li>
+            <li><a href="register_admin.php">تسجيل جديد</a></li>
 
 <!-- ===============================================================================================  -->
+
+
+
+
+
+
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">المواد
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">احصائيات عن المقررات
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" style="text-align: center">
-                    <li><a href="addMaterial.php">إضافة مادة جديدة </a></li>
+                    <li ><a href="showMaterial.php">عرض المواد</a></li>
                     <hr>
-                    <li><a href="editMaterial.php">تعديل على المادة</a></li>
+                    <li ><a href="ListOfCourses.php">عرض جميع المواد</a></li>
                     <hr>
-                    <li><a href="deleteMaterial.php">حذف المادة</a></li>
+                    <li ><a href="numberOfFreeCourses.php">عدد المواد الحرة</a></li>
+                    <hr>
+                    <li ><a href="numberOfCoursesOnEachDepartment.php">عدد المواد في كل قسم</a></li>
+                    <hr>
+                    <li ><a href="numberOfSchoolHour.php">عدد الساعات الدراسية في كل مادة</a></li>
+                    <hr>
+                    <li ><a href="numberOfSchoolHourEachSemester.php">عدد الساعات الدراسية في كل فصل</a></li>
+                    <hr>
+                </ul>
+            </li>
+            <!-- ===============================================================================================  -->
+
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">احصائيات عن الاقسام
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="text-align: center">
+                    <li ><a href="numberOfClassRoom.php">عدد القاعات في كل قسم</a></li>
+
+                </ul>
+            </li>
+            <!-- ===============================================================================================  -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">احصائيات عن الطلاب
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu"  style="text-align: center">
+                    <li><a href="numberOfStudents.php">عدد الطلاب في الكلية </a></li>
+                    <hr>
+                    <li><a href="numberOfStudentEachSemester.php">عدد الطلاب في كل فصل دراسي </a></li>
+                    <hr>
+                    <li><a href="numberOfVisitor.php">عدد الطلاب الزائرين في كل فصل </a></li>
+                    <hr>
+                    <li><a href="numberOfStudentGraduated.php">عدد الطلاب الخريجين في السنوات الخمس الأخيرة </a></li>
+                    <hr>
+                    <li><a href="numberOfHonerStudent.php">عدد الطلاب الحاصلين على مرتبة الشرف </a></li>
+                    <hr>
+                    <li><a href="numberOfStudentOnEachDepartment.php">عدد الطلاب في كل قسم </a></li>
+                    <hr>
+                    <li><a href="StudentInfo.php">معلومات الطلاب </a></li>
+                </ul>
+            </li>
+            <!-- ===============================================================================================  -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">احصائيات عن هيئة التدريس
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="text-align: center">
+                    <li><a href="numberOfLecturers.php">عدد أعضاء هيئة التدريس</a></li>
+                    <hr>
+                    <li><a href="numberOfMdoctor.php">عدد الأساتذة المساعدين</a></li>
+                    <hr>
+                    <li><a href="numberOfSudianLecturers.php">عدد الأساتذة السعوديين</a></li>
+                    <hr>
+                    <li><a href="numberOfNonSudianLecturer.php">عدد الأساتذة الأجانب</a></li>
+                    <hr>
+                    <li><a href="LecturerInfo.php">الأساتذة ومعلوماتهم</a></li>
+
+
+
+                </ul>
+            </li>
+            <!-- ===============================================================================================  -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">المقررات
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="text-align: center">
+                    <li><a href="addMaterial.php">إضافة مقرر جديد </a></li>
+                    <hr>
+                    <li><a href="editMaterial.php">تعديل على المقرر</a></li>
+                    <hr>
+                    <li><a href="deleteMaterial.php">حذف المقرر</a></li>
 
                 </ul>
             </li>
 <!-- ===============================================================================================  -->
 
-            <li class="dropdown">
+          <!--  <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">المعلومات
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" style="text-align: center">
@@ -34,6 +107,7 @@
 
                 </ul>
             </li>
+            -->
             <!-- ===============================================================================================  -->
 
 
@@ -46,13 +120,15 @@
                     <li><a href="editCategory.php">تعديل قسم</a></li>
                     <hr>
                     <li><a href="deletCategory.php">حذف قسم</a></li>
+                    <hr>
+                    <li><a href="addClassRoom.php">اضافة قاعدة دراسية</a></li>
 
                 </ul>
             </li>
 
             <!-- ===============================================================================================  -->
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">  الطلاب و العلمين
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">  الطلاب
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu" style="text-align: center">
                     <li><a href="register.php">إضافة  </a></li>
@@ -60,11 +136,26 @@
                     <li><a href="edit_info.php">تعديل </a></li>
                     <hr>
                     <li><a href="delete.php">حذف </a></li>
+                    <hr>
+                    <li><a href="StudentVisit.php">تسجيل زيارة جديدة</a></li>
+                    <hr>
+                    <li><a href="addHoner.php">تسجيل الطلبة الطلبة الحاصلين على مرتبة شرف</a></li>
 
                 </ul>
             </li>
             <!-- ===============================================================================================  -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> أعضاء هيئة التدريس
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" style="text-align: center">
+                    <li><a href="registerSupervisor.php">إضافة  </a></li>
+                    <hr>
+                    <li><a href="edit_info.php">تعديل </a></li>
+                    <hr>
+                    <li><a href="delete.php">حذف </a></li>
 
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

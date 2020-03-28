@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>المعلومات</title>
+    <title> عدد الطلاب الحاصلين على مرتبة الشرف</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -70,7 +70,6 @@ include('navbar.html')
             <?php
 
             $info = getInfo();
-
             ?>
             <p class="text-left" style="color: red">
                 <?php
@@ -93,43 +92,13 @@ include('navbar.html')
                 }
                 ?>
             </p>
-            <form action="../database/EditInformation.php" method="post" style="padding: 50px;">
-
-
-
-
-
+            <form action="../database/editcatinfo.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-right">اسم المعلومة </label>
+                    <label class="pull-right"> عدد الطلاب الحاصلين على مرتبة الشرف</label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control" name="Information_select" id="Information_select">
-                            <option selected disabled>--- اختار اسم المعلومة ---</option>
-                            <?php
-                            for($i=0;$i<count($info);$i++){
-                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
-                            }
-
-                            ?>
-                        </select>
+                        <input name="cat_name" id="cat_name" type="text" class="form-control input-lg" placeholder="" style="text-align: right" readonly value="<?php echo $info[0]["count"] ?>"/>
                     </div>
                 </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">المعلومة </label>
-                    <div class="input-group input-group-icon">
-                        <input name="info_name" id="info_name" type="text" class="form-control input-lg" placeholder="Information ..."
-                               required/>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">وصف المعلومة </label>
-                    <div class="input-group input-group-icon">
-                        <textarea name="info_description" id="info_description" class="form-control" rows="8"></textarea>
-                    </div>
-                </div>
-
-
             </form>
 
 
@@ -177,32 +146,6 @@ include('navbar.html')
 </body>
 </html>
 
-<script>
-    $(document).ready(function () {
-
-
-        $("#Information_select").on("change",function () {
-            var id = $(this).val();
-            $.ajax({
-                url: "../database/getInformatonById.php",
-                type: "get",
-                data: {"id":id} ,
-                success: function (res) {
-                    res = JSON.parse(res);
-                    $("#info_name").val(res[0]["name"]);
-                    $("#info_description").val(res[0]["description"]);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-
-        })
-    })
-</script>
-
-
 <?php
 
 function getInfo(){
@@ -222,7 +165,7 @@ function getInfo(){
 
 
 
-    $query = "SELECT * FROM `information`";
+    $query = "SELECT COUNT(*) as count FROM `honer` ";
 
     $result = $conn->query($query);
 
@@ -230,13 +173,13 @@ function getInfo(){
         $info = [];
         while ($row = $result->fetch_assoc()) {
             array_push($info,
-                ["id" => $row["id"],
-                    "description" => $row["description"],
-                    "name" => $row["name"]
+                ["count" => $row["count"]
                 ]);
         }
         return $info;
         //echo $sl_number;
+    } else {
+        header('Location: ../sign_in.php');
     }
 }
 

@@ -68,7 +68,7 @@ include('navbar.html')
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الراس مركز المعلومات
 
             </h4>
             <?php
@@ -207,7 +207,7 @@ function getInfo(){
         return $info;
         //echo $sl_number;
     } else {
-        header('Location: ../sign_in.php');
+      //  header('Location: ../sign_in.php');
     }
 }
 

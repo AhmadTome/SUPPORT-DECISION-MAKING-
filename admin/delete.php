@@ -64,7 +64,7 @@ include('navbar.html')
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الراس مركز المعلومات
 
             </h4>
 
@@ -91,7 +91,7 @@ include('navbar.html')
             </p>
             <form action="../database/deleteInfo.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="">رقم الطالب <span class="required-star">*</span></label>
+                    <label class="">الرقم التعريفي <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                             <span style="display: inline-block; width: 50%">
                                  <input name="sl_number" id="sl_number" type="text" class="form-control input-lg" placeholder="Number of student or supervisor" required/>

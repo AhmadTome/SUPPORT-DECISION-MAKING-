@@ -43,10 +43,19 @@ $result = $conn->query($query);
 if($result) {
     $_SESSION['user_email'] = $email;
     echo "Succesfully registered";
-    if($user_type == "student" || $user_type == "supervisor"){
+    if($user_type == "student"){
+        $_SESSION['success'] = 'The account added successfully ';
         header('Location: ../admin/register.php');
-       echo 'supervisor or student';
-        $_SESSION['success'] = 'The '. $user_type .' added successfully ';
+    }
+
+    if($user_type == "supervisor"){
+        $_SESSION['success'] = 'The account added successfully ';
+        header('Location: ../admin/registerSupervisor.php');
+    }
+
+    if($user_type == "sadmin"){
+        $_SESSION['success'] = 'The account added successfully ';
+        header('Location: ../admin/register_admin.php');
     }
 
 }

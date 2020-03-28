@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caf3b49c-8e88-4c52-854b-e0601560d5de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/StudentVisit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/addClassRoom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/addHoner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addClassRoom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addHoner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/addVisit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/ListOfCourses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/StudentInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfClassRoom.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfCoursesOnEachDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfFreeCourses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfHonerStudent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfSchoolHour.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfStudents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supervisor/numberOfVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/LecturerInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/ListOfCourses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/StudentInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfClassRoom.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfCoursesOnEachDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfFreeCourses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfHonerStudent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfLecturers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfMdoctor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfNonSudianLecturer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfSchoolHour.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfSchoolHourEachSemester.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfStudentEachSemester.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfStudentGraduated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfStudentOnEachDepartment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfStudents.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfSudianLecturers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/numberOfVisitor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/registerSupervisor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/register_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/showMaterial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/StudentVisit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/StudentVisit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/addCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addClassRoom.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addClassRoom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addHoner.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addHoner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/addInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/addMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addMaterial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/deletCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/deletCategory.php" afterDir="false" />
@@ -35,15 +40,27 @@
       <change beforePath="$PROJECT_DIR$/admin/edit_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit_info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/addMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/addMaterial.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/LecturerInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/LecturerInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/ListOfCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/ListOfCourses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/StudentInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/StudentInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/editPersonalInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/editPersonalInfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfClassRoom.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfClassRoom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfCoursesOnEachDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfCoursesOnEachDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfFreeCourses.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfFreeCourses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfHonerStudent.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfHonerStudent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/numberOfLecturers.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfLecturers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/numberOfMdoctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfMdoctor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfSchoolHour.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfSchoolHour.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfStudents.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfStudents.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supervisor/numberOfVisitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/numberOfVisitor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/showCategories.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showCategories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/showInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supervisor/showMaterial.php" beforeDir="false" afterPath="$PROJECT_DIR$/supervisor/showMaterial.php" afterDir="false" />
@@ -59,11 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -71,11 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -83,11 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -95,47 +103,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supervisor/numberOfVisitor.php">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/supervisor/showCategories.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/supervisor/showInformation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="479">
+              <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -143,23 +130,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/showMaterial.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2774">
+              <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/supervisor/StudentInfo.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHour.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -167,11 +148,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="643">
+              <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -212,12 +199,15 @@
       <find>Palestine</find>
       <find>Palestinian Territory, Occupied</find>
       <find>limiter</find>
+      <find>محافزة</find>
+      <find>header</find>
     </findStrings>
     <replaceStrings>
       <replace>#06a39f</replace>
       <replace>../assets</replace>
       <replace>pull-right</replace>
       <replace>right</replace>
+      <replace>محافظة</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -226,36 +216,41 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/EditInformation.php" />
-        <option value="$PROJECT_DIR$/database/editMaterial.php" />
-        <option value="$PROJECT_DIR$/database/editInfo.php" />
-        <option value="$PROJECT_DIR$/database/deleteInfo.php" />
-        <option value="$PROJECT_DIR$/sign_in.php" />
-        <option value="$PROJECT_DIR$/database/login.php" />
-        <option value="$PROJECT_DIR$/supervisor/lecturers_info.php" />
-        <option value="$PROJECT_DIR$/database/addVisit.php" />
-        <option value="$PROJECT_DIR$/database/addHoner.php" />
-        <option value="$PROJECT_DIR$/database/register.php" />
-        <option value="$PROJECT_DIR$/database/addMaterial.php" />
-        <option value="$PROJECT_DIR$/admin/navbar.html" />
-        <option value="$PROJECT_DIR$/database/addClassRoom.php" />
-        <option value="$PROJECT_DIR$/supervisor/navbar.html" />
         <option value="$PROJECT_DIR$/admin/addClassRoom.php" />
         <option value="$PROJECT_DIR$/admin/addCategory.php" />
         <option value="$PROJECT_DIR$/admin/addHoner.php" />
         <option value="$PROJECT_DIR$/admin/addInfo.php" />
         <option value="$PROJECT_DIR$/admin/addMaterial.php" />
         <option value="$PROJECT_DIR$/admin/deletCategory.php" />
-        <option value="$PROJECT_DIR$/admin/delete.php" />
         <option value="$PROJECT_DIR$/admin/deleteInfo.php" />
         <option value="$PROJECT_DIR$/admin/deleteMaterial.php" />
-        <option value="$PROJECT_DIR$/admin/edit_info.php" />
-        <option value="$PROJECT_DIR$/admin/editCategory.php" />
         <option value="$PROJECT_DIR$/admin/editInf.php" />
         <option value="$PROJECT_DIR$/admin/editMaterial.php" />
-        <option value="$PROJECT_DIR$/admin/register.php" />
         <option value="$PROJECT_DIR$/admin/StudentVisit.php" />
         <option value="$PROJECT_DIR$/supervisor/editPersonalInfo.php" />
+        <option value="$PROJECT_DIR$/supervisor/numberOfVisitor.php" />
+        <option value="$PROJECT_DIR$/supervisor/showCategories.php" />
+        <option value="$PROJECT_DIR$/supervisor/showInformation.php" />
+        <option value="$PROJECT_DIR$/supervisor/showMaterial.php" />
+        <option value="$PROJECT_DIR$/supervisor/StudentInfo.php" />
+        <option value="$PROJECT_DIR$/admin/editCategory.php" />
+        <option value="$PROJECT_DIR$/admin/registerSupervisor.php" />
+        <option value="$PROJECT_DIR$/admin/register.php" />
+        <option value="$PROJECT_DIR$/admin/edit_info.php" />
+        <option value="$PROJECT_DIR$/admin/delete.php" />
+        <option value="$PROJECT_DIR$/supervisor/navbar.html" />
+        <option value="$PROJECT_DIR$/admin/register_admin.php" />
+        <option value="$PROJECT_DIR$/admin/navbar.html" />
+        <option value="$PROJECT_DIR$/database/register.php" />
+        <option value="$PROJECT_DIR$/admin/LecturerInfo.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfSchoolHourEachSemester.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfStudentEachSemester.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfStudentOnEachDepartment.php" />
+        <option value="$PROJECT_DIR$/admin/StudentInfo.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfClassRoom.php" />
+        <option value="$PROJECT_DIR$/admin/ListOfCourses.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfCoursesOnEachDepartment.php" />
+        <option value="$PROJECT_DIR$/admin/numberOfSchoolHour.php" />
         <option value="$PROJECT_DIR$/supervisor/LecturerInfo.php" />
         <option value="$PROJECT_DIR$/supervisor/ListOfCourses.php" />
         <option value="$PROJECT_DIR$/supervisor/numberOfClassRoom.php" />
@@ -272,20 +267,15 @@
         <option value="$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php" />
         <option value="$PROJECT_DIR$/supervisor/numberOfStudents.php" />
         <option value="$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php" />
-        <option value="$PROJECT_DIR$/supervisor/numberOfVisitor.php" />
-        <option value="$PROJECT_DIR$/supervisor/showCategories.php" />
-        <option value="$PROJECT_DIR$/supervisor/showInformation.php" />
-        <option value="$PROJECT_DIR$/supervisor/showMaterial.php" />
-        <option value="$PROJECT_DIR$/supervisor/StudentInfo.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1712" />
-    <option name="y" value="18" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-225" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -293,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +299,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,16 +311,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\admin" />
+      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\supervisor" />
+      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\student" />
+      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\supervisor" />
       <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\admin" />
       <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\category" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\supervisor" />
-      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\student" />
-      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING\admin" />
-      <recent name="C:\Users\atome\PhpstormProjects\SUPPORT DECISION MAKING" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,16 +372,19 @@
       <workItem from="1584552855888" duration="3987000" />
       <workItem from="1584699240407" duration="7753000" />
       <workItem from="1584824849224" duration="4215000" />
+      <workItem from="1585300802596" duration="31000" />
+      <workItem from="1585314354816" duration="3906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86301000" />
+    <option name="totallyTimeSpent" value="90238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-225" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17324094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -417,149 +410,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/deleteInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/kill_session.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sign_in.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/tables.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addVisit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/deleteInformation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" lean-forward="true" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addHoner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addMaterial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="133" selection-start-line="26" selection-start-column="133" selection-end-line="26" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/addClassRoom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addClassRoom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="71" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addHoner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/addMaterial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -580,47 +430,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/deleteInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/deleteMaterial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/edit_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/editCategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
@@ -660,16 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/editPersonalInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -680,213 +480,315 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/LecturerInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/ListOfCourses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfClassRoom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfCoursesOnEachDepartment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfFreeCourses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfHonerStudent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfLecturers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfMdoctor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHour.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/numberOfVisitor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="1224">
           <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/showCategories.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="1156">
           <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/showInformation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervisor/showMaterial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/supervisor/StudentInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="945">
           <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sign_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/editCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="257" column="10" selection-start-line="257" selection-start-column="10" selection-end-line="257" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="108" column="128" selection-start-line="108" selection-start-column="128" selection-end-line="108" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="106" column="138" selection-start-line="106" selection-start-column="138" selection-end-line="106" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/deleteInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="67" selection-end-column="17" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/registerSupervisor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="111" column="15" selection-end-line="582" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#3;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#4;n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/register_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="934">
+          <caret line="109" column="127" selection-start-line="109" selection-start-column="121" selection-end-line="109" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfStudentEachSemester.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfStudentOnEachDepartment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/StudentInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="225" column="9" selection-start-line="225" selection-start-column="9" selection-end-line="225" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfClassRoom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/showMaterial.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ListOfCourses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="6" selection-start-line="209" selection-start-column="6" selection-end-line="209" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/LecturerInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="223" column="8" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfCoursesOnEachDepartment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfSchoolHourEachSemester.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/numberOfSchoolHour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/LecturerInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/ListOfCourses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfClassRoom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfCoursesOnEachDepartment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfFreeCourses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="176" column="9" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfHonerStudent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfLecturers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfMdoctor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfNonSudianLecturer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSchoolHourEachSemester.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentEachSemester.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentGraduated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudentOnEachDepartment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="209" column="9" selection-start-line="209" selection-start-column="9" selection-end-line="209" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfStudents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="8" selection-start-line="181" selection-start-column="8" selection-end-line="181" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/numberOfSudianLecturers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/showMaterial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2774">
+          <caret line="49" column="48" lean-forward="true" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor/showInformation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
         </state>
       </provider>
     </entry>

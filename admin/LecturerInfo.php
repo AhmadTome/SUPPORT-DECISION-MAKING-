@@ -5,7 +5,7 @@ session_start();
 <!doctype html>
 <html class="fixed">
 <head>
-    <title>المعلومات</title>
+    <title>معلومات المحاضرين</title>
     <!-- Basic -->
     <meta charset="UTF-8">
 
@@ -50,7 +50,11 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../assets/css/util.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 
-
+<style>
+    th{
+        text-align: right !important;
+    }
+</style>
 </head>
 <body>
 <?php
@@ -70,7 +74,6 @@ include('navbar.html')
             <?php
 
             $info = getInfo();
-
             ?>
             <p class="text-left" style="color: red">
                 <?php
@@ -93,43 +96,43 @@ include('navbar.html')
                 }
                 ?>
             </p>
-            <form action="../database/EditInformation.php" method="post" style="padding: 50px;">
-
-
-
-
-
+            <form action="../database/editcatinfo.php" method="post" style="padding: 50px;">
                 <div class="form-group mb-lg">
-                    <label class="pull-right">اسم المعلومة </label>
+                    <label class="pull-right" style="font-size: 24px;">معلومات المحاضرين</label>
                     <div class="input-group input-group-icon">
-                        <select class="form-control" name="Information_select" id="Information_select">
-                            <option selected disabled>--- اختار اسم المعلومة ---</option>
+                        <table class="table text-right"  dir="rtl">
+                            <thead >
+                            <tr >
+                                <th>الاسم</th>
+                                <th>الرقم</th>
+                                <th > الايميل</th>
+                                <th > السيرة الذاتية</th>
+                            </tr>
+                            </thead>
+                            <br>
+
                             <?php
-                            for($i=0;$i<count($info);$i++){
-                                echo '<option value='. $info[$i]["id"] .'>'. $info[$i]["name"] .'</option>';
-                            }
+
+                                for ($i=0;$i<count($info);$i++){
+                                    echo ' <tr>
+                                                <td>'. $info[$i]["name"] .'</td>
+                                                <td>'. $info[$i]["number"] .'</td>
+                                                <td>'. $info[$i]["email"] .'</td>
+                                                <td>الاستاذ : '. $info[$i]["name"] .'<br/> من مواليد '. $info[$i]["age"] .'<br/>   الجنس '. $info[$i]["gender"] .'  <br/>  الدرجة العلمية '. $info[$i]["degree"] .'
+                                                    <br/>رقم الهاتف '. $info[$i]["mobile_no"] .'  <br/>  من دولة '. $info[$i]["country"] .'
+                                                </td>
+                                           </tr>';
+                                }
 
                             ?>
-                        </select>
+
+                            <br/>
+
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">المعلومة </label>
-                    <div class="input-group input-group-icon">
-                        <input name="info_name" id="info_name" type="text" class="form-control input-lg" placeholder="Information ..."
-                               required/>
-                    </div>
-                </div>
-
-                <div class="form-group mb-lg">
-                    <label class="pull-right">وصف المعلومة </label>
-                    <div class="input-group input-group-icon">
-                        <textarea name="info_description" id="info_description" class="form-control" rows="8"></textarea>
-                    </div>
-                </div>
-
-
             </form>
 
 
@@ -177,32 +180,6 @@ include('navbar.html')
 </body>
 </html>
 
-<script>
-    $(document).ready(function () {
-
-
-        $("#Information_select").on("change",function () {
-            var id = $(this).val();
-            $.ajax({
-                url: "../database/getInformatonById.php",
-                type: "get",
-                data: {"id":id} ,
-                success: function (res) {
-                    res = JSON.parse(res);
-                    $("#info_name").val(res[0]["name"]);
-                    $("#info_description").val(res[0]["description"]);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus, errorThrown);
-                }
-            });
-
-
-        })
-    })
-</script>
-
-
 <?php
 
 function getInfo(){
@@ -222,7 +199,7 @@ function getInfo(){
 
 
 
-    $query = "SELECT * FROM `information`";
+    $query = "SELECT * FROM `users` WHERE `type` = 'supervisor'";
 
     $result = $conn->query($query);
 
@@ -230,13 +207,21 @@ function getInfo(){
         $info = [];
         while ($row = $result->fetch_assoc()) {
             array_push($info,
-                ["id" => $row["id"],
-                    "description" => $row["description"],
-                    "name" => $row["name"]
+                ["name" => $row["name"],
+                "email" => $row["email"],
+                "number" => $row["number"],
+                "age" => $row["age"],
+                "gender" => $row["gender"],
+                "level" => $row["level"],
+                "degree" => $row["degree"],
+                "mobile_no" => $row["mobile_no"],
+                "country" => $row["country"]
                 ]);
         }
         return $info;
         //echo $sl_number;
+    } else {
+      //  header('Location: ../sign_in.php');
     }
 }
 

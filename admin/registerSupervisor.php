@@ -103,10 +103,11 @@ include ('navbar.html');
                     </div>
                 </div>
 
+
                 <div class="form-group mb-lg">
                     <label class="pull-right"><span id="user_type_title"></span> نوع الحساب <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="user_type" id="user_type" type="text" class="form-control input-lg" readonly value="student"
+                        <input name="user_type" id="user_type" type="text" class="form-control input-lg" readonly value="supervisor"
                                required/>
                     </div>
                 </div>

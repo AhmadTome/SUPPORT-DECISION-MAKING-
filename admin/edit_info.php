@@ -72,7 +72,7 @@ include('navbar.html')
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الراس مركز المعلومات
 
             </h4>
             <p class="text-right" style="color: red">
@@ -104,7 +104,7 @@ include('navbar.html')
                     <label class="pull-right">رقم الطالب او المشرف <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                             <span class="pull-right" style="display: inline-block; width: 50%">
-                                 <input name="number" id="sl_number" type="text" class="form-control input-lg" placeholder="رقم الطالب" required/>
+                                 <input name="number" id="sl_number" type="text" class="form-control input-lg" placeholder="الرقم التعريفي" required/>
                             </span>
                         <span class="pull-left" style="display: inline-block; width: 40%; ">
                                  <input style="background-color:#06a39f; color: white; text-align: center" name="search" id="search" type="button" class="form-control input-lg" value="بحث"/>

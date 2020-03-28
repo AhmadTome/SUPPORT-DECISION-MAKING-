@@ -71,7 +71,7 @@ include ('navbar.html');
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافزة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الراس مركز المعلومات
 
             </h4>
             <p class="text-right" style="color: red">
