@@ -66,7 +66,7 @@ include('navbar.html')
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافظة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الرس مركز المعلومات
 
             </h4>
             <p class="text-left" style="color: red">

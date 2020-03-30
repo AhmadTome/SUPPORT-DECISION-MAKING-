@@ -65,7 +65,7 @@ include ('navbar.html');
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافظة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الرس مركز المعلومات
 
             </h4>
             <p class="text-left" style="color: red">
@@ -104,11 +104,14 @@ include ('navbar.html');
                 </div>
 
 
-                <div class="form-group mb-lg" style="display: none">
+                <div class="form-group mb-lg" >
                     <label class="pull-right"><span id="user_type_title"></span> نوع الحساب <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="user_type" id="user_type" type="text" class="form-control input-lg" readonly value="sadmin"
-                               required/>
+                        <select class="form-control" name="user_type" id="user_type">
+                            <option selected disabled>--- اختيار نوع الحساب ---</option>
+                            <option value="sadmin">Admin</option>
+                            <option value="supervisor">Supervisor</option>
+                        </select>
                     </div>
                 </div>
 
@@ -120,10 +123,10 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">تاريخ الميلاد <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="Bday" type="text" class="form-control input-lg" required/>
+                        <input name="Bday" type="text" class="form-control input-lg" required value="-"/>
 
                     </div>
                 </div>
@@ -144,11 +147,11 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">المستوى العلمي <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="level">
-                            <option selected disabled>--- اختار المستوى التعليمي ---</option>
+                            <option selected value="-">--- اختار المستوى التعليمي ---</option>
                             <option value="موظف">موظف</option>
                             <option value="سنة أولى فصل أول">سنة أولى فصل أول</option>
                             <option value="سنة أولى فصل ثاني">سنة أولى فصل ثاني</option>
@@ -166,11 +169,11 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">القسم <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <select class="form-control" name="department">
-                            <option selected disabled>--- اختار القسم ---</option>
+                            <option selected value="-">--- اختار القسم ---</option>
                             <option value="موظف">موظف</option>
                             <option value="كلية الشريعة">كلية الشريعة</option>
                             <option value="كلية المجتمع">كلية المجتمع</option>
@@ -186,11 +189,11 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">الدرجة <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon" >
                         <select class="form-control" name="degree_program">
-                            <option selected disabled>--- اختار الدرجة ---</option>
+                            <option selected value="-">--- اختار الدرجة ---</option>
                             <option value="Bacholar">بكالوريس</option>
                             <option value="master">ماجستير</option>
                             <option value="doctor">دكتوراه</option>
@@ -201,10 +204,10 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">سنة التخرج <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="gradulation_year" type="date" class="form-control input-lg" placeholder="اكتب السنة مثل 2020 او اتركها فارغة اذا المستخدم محاضر"
+                        <input name="gradulation_year" type="date" class="form-control input-lg" placeholder="اكتب السنة مثل 2020 او اتركها فارغة اذا المستخدم محاضر" value="-" readonly
                                required/>
                     </div>
                 </div>

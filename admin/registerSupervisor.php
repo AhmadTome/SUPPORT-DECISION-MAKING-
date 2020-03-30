@@ -65,7 +65,7 @@ include ('navbar.html');
 
             </div>
             <h4 style="text-align: center;">
-                كلية العلوم والآداب في محافظة الراس مركز المعلومات
+                كلية العلوم والآداب في محافظة الرس مركز المعلومات
 
             </h4>
             <p class="text-left" style="color: red">
@@ -104,7 +104,7 @@ include ('navbar.html');
                 </div>
 
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right"><span id="user_type_title"></span> نوع الحساب <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <input name="user_type" id="user_type" type="text" class="form-control input-lg" readonly value="supervisor"
