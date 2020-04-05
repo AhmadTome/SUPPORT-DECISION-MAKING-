@@ -120,10 +120,10 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">تاريخ الميلاد <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
-                        <input name="Bday" type="text" class="form-control input-lg" required/>
+                        <input name="Bday" type="text" class="form-control input-lg" required value="-"/>
 
                     </div>
                 </div>
@@ -487,23 +487,23 @@ include ('navbar.html');
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">الرقم السري <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <input name="pwd" type="password" class="form-control input-lg" placeholder="*************"
-                               required/>
+                               required value="-"/>
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <label class="pull-right">تأكيد الرقم السري <span class="required-star">*</span></label>
                     <div class="input-group input-group-icon">
                         <input name="r_pwd" type="password" class="form-control input-lg" placeholder="*************"
-                               required/>
+                               required value="-"/>
                     </div>
                 </div>
 
-                <div class="form-group mb-lg">
+                <div class="form-group mb-lg" style="display: none">
                     <div class="input-group input-group-icon text-left">
                         <input class="pull-right" name="username" type="radio" />
                         <label class="pull-right">&nbsp;وافقت على <span style="color: #00ff09">سياسة البرنامج والمستخدمين</span>&nbsp;</label>

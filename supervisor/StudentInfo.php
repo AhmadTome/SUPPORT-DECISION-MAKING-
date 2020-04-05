@@ -223,7 +223,7 @@ function getInfo(){
         return $info;
         //echo $sl_number;
     } else {
-        header('Location: ../sign_in.php');
+       // header('Location: ../sign_in.php');
     }
 }
 
