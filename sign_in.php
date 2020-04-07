@@ -169,8 +169,8 @@ session_start();
 
     .register-right {
         background: #f8f9fa;
-        border-top-left-radius: 15% 50%;
-        border-bottom-left-radius: 15% 50%;
+        border-top-right-radius: 15% 50%;
+        border-bottom-right-radius: 15% 50%;
     }
 
     .register-left img {
@@ -280,28 +280,24 @@ session_start();
 
 <div class="container register">
     <div class="row">
-        <div class="col-md-3 register-left">
-            <img src="img/logo2.png" alt="" style="width:240px;" />
-            <h3 style="    font-family: cursive;color:#1143a6; ">مركز المعلومات ودعم القرار</h3>
-        </div>
+
         <div class="col-md-9 register-right">
 
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab" style="margin-top: 114px;">
-                    <h3 class="register-heading">Login</h3>
-                    <div class="row register-form">
+                    <div class="row register-form" style="margin-left: 201px">
                         <div class="col-md-12 profile_card" >
-                            <form class="form-inline" action="database/login.php" method="post">
+                            <form  action="database/login.php" method="post">
                                 <div class="form-group">
                                     <i class="fa fa-envelope-o"></i>
-                                    <input class="input100" type="text" name="username" placeholder="Email" required>
+                                    <input class="input100" type="text" name="username" placeholder="ايميل" required style="text-align: right">
                                 </div>
                                 <div class="form-group">
                                     <i class="fa fa-lock"></i>
-                                    <input class="input100" type="password" name="pwd" placeholder="***********" required>
+                                    <input class="input100" type="password" name="pwd" placeholder="***********" required style="text-align: right">
                                 </div>
-                                <div class="float-right">
-                                    <input type="submit" class="btn btn-primary" style="background-color: #1143a6" value="Login" />
+                                <div class="float-l">
+                                    <input type="submit" class="btn btn-primary" style="background-color: #1143a6" value="تسجيل دخول" />
                                 </div>
                             </form>
                         </div>
@@ -309,6 +305,11 @@ session_start();
                 </div>
 
             </div>
+        </div>
+
+        <div class="col-md-3 register-left">
+            <img src="img/logo2.png" alt="" style="width:240px;" />
+            <h3 style="    font-family: cursive;color:#1143a6; ">مركز المعلومات ودعم اتخاذ القرار</h3>
         </div>
     </div>
 </div>
